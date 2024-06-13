@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shopping Cart</title>
+
+<head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap">
+     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100" rel="stylesheet">
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: top;
+        top:20;
+        height: 100vh;
+        background-color: ghostwhite;
+        
+    }
+    table {
+        width: 80%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+        border-radius: 10px;
+        overflow-y auto;
+        box-shadow: 0 15px 28px rgba(0, 0, 0, 0.5);
+        animation: slideInDown 0.5s ease;
+        font-family: 'playfair Display', serif;
+    }
+    h2 {
+    font-family: 'playfair Display', serif;
+    }
+    th, td {
+        padding: 10px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+        font-family: 'playfair Display', serif;
+    }
+    th {
+        background-color: #f2f2f2;
+    }
+    .checkout-btn {
+        padding: 10px 20px;
+        background-color: transparent;
+        color: black;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: 16px;
+        text-decoration: none;
+        border: 0.5px solid black;
+        backdrop-filter: blur(80px);
+        -webkit-backdrop-filter: blur(19px);
+        font-family:'playfair Display', serif;
+        display: none;
+        
+    }
+    .clearCart{
+      padding: 10px 20px;
+      margin-top: 10px;
+      background-color: transparent;
+      color: black;
+      border: 0.5px solid black;
+      border-radius: 7px;
+      cursor: pointer;
+      font-size: 16px;
+      text-decoration: none;
+      backdrop-filter: blur(80px);
+      -webkit-backdrop-filter: blur(19px);
+      font-family: 'playfair Display', serif;
+    }
+    .checkout-btn:hover {
+      color: white;
+        background-color: grey;
+    }
+    .quantity-btn {
+        background-color: #f2f2f2;
+        border: 0.5px solid grey;
+        cursor: pointer;
+        border-radius: 4px;
+        margin-bottom: 2px;
+        margin-top: 2px;
+    }
+    .quantity-input {
+        width: 40px;
+        text-align: center;
+    }
+    .product-image {
+        width: 100px;
+        border-radius: 20px;/* Adjust the width as needed */
+    }
+    @keyframes slideInDown {
+        from {
+            transform: translateY(-50px);
+            opacity: 0;
+        }
+        to {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+    .material-symbols-outlined{
+      font-size: 24pt;
+    }
+    
+    
+    #tray1,#tray2,#tray3,#tray4,#tray5,#tray6,#tray7,#tray8 {
+      display: none;
+    }
+   
+</style>
+</head>
+<body>
+
+<u><h2>Shopping Cart</h2></u>
+
+<table id = "tab">
+  <thead>
+    <tr>
+      <th>Product</th>
+      <th>Price</th>
+      <th>Quantity</th>
+      <th>Total</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr id = "tray1">
+      <td>
+        <img id = "cartImage1"class="product-image">
+        <p id = "productName">Product 1</p>
+      </td>
+      <td id = "price0">$10.00</td>
+      <td>
+        <button class="quantity-btn" onclick="decrementQuantity(this)">-</button>
+        <input class="quantity-input" type="number" value="1">
+        <button class="quantity-btn" onclick="incrementQuantity(this)">+</button>
+      </td>
+      <td id = "total0">$10.00</td>
+      
+    </tr>
+    <tr id = "tray2">
+      <td>
+        <img id = "cartImage2"class="product-image">
+        <p id = "productName1">Product2</p>
+      </td>
+      <td id = "price1">$20.00</td>
+      <td>
+        <button class="quantity-btn" onclick="decrementQuantity(this)">-</button>
+        <input class="quantity-input" type="number" value="1">
+        <button class="quantity-btn" onclick="incrementQuantity(this)">+</button>
+      </td>
+      <td id = "total1">$20.00</td>
+    </tr >
+        <tr id = "tray3">
+          <td>
+            <img id="cartImage3" class="product-image">
+            <p id="productName2">Product2</p>
+          </td>
+          <td id = "price2">$20.00</td>
+          <td>
+            <button class="quantity-btn" onclick="decrementQuantity(this)">-</button>
+            <input class="quantity-input" type="number" value="1">
+            <button class="quantity-btn" onclick="incrementQuantity(this)">+</button>
+          </td>
+          <td id = "total2">$20.00</td>
+        </tr>
+            <tr id = "tray4">
+              <td>
+                <img id="cartImage4" class="product-image">
+                <p id="productName3">Product2</p>
+              </td>
+              <td id = "price3" >$20.00</td>
+              <td>
+                <button class="quantity-btn" onclick="decrementQuantity(this)">-</button>
+                <input class="quantity-input" type="number" value="1">
+                <button class="quantity-btn" onclick="incrementQuantity(this)">+</button>
+              </td>
+              <td id = "total3">$20.00</td>
+            </tr>
+                <tr id = "tray5">
+                  <td>
+                    <img id="cartImage5" class="product-image">
+                    <p id="productName4">Product2</p>
+                  </td>
+                  <td id = "price4">$20.00</td>
+                  <td>
+                    <button class="quantity-btn" onclick="decrementQuantity(this)">-</button>
+                    <input class="quantity-input" type="number" value="1">
+                    <button class="quantity-btn" onclick="incrementQuantity(this)">+</button>
+                  </td>
+                  <td id = "total4">$20.00</td>
+                </tr>
+                    <tr id = "tray6">
+                      <td>
+                        <img id="cartImage6" class="product-image">
+                        <p id="productName5">Product2</p>
+                      </td>
+                      <td id = "price5">$20.00</td>
+                      <td>
+                        <button class="quantity-btn" onclick="decrementQuantity(this)">-</button>
+                        <input class="quantity-input" type="number" value="1">
+                        <button class="quantity-btn" onclick="incrementQuantity(this)">+</button>
+                      </td>
+                      <td id = "total5">$20.00</td>
+                    </tr>
+                        <tr id = "tray7">
+                          <td>
+                            <img id="cartImage7" class="product-image">
+                            <p id="productName6">Product2</p>
+                          </td>
+                          <td id = "price6">$20.00</td>
+                          <td>
+                            <button class="quantity-btn" onclick="decrementQuantity(this)">-</button>
+                            <input class="quantity-input" type="number" value="1">
+                            <button class="quantity-btn" onclick="incrementQuantity(this)">+</button>
+                          </td>
+                          <td id "total6">$20.00</td>
+                        </tr>
+                            <tr id = "tray8">
+                              <td>
+                                <img id="cartImage8" class="product-image">
+                                <p id="productName7">Product2</p>
+                              </td>
+                              <td id = "price7">$20.00</td>
+                              <td>
+                                <button class="quantity-btn" onclick="decrementQuantity(this)">-</button>
+                                <input class="quantity-input" type="number" value="1">
+                                <button class="quantity-btn" onclick="incrementQuantity(this)">+</button>
+                              </td>
+                              <td id = "total7">$20.00</td>
+                            </tr>
+                            
+    <!-- Add more rows as needed -->
+  </tbody>
+  
+</table>
+
+<button class="checkout-btn">Checkout</button>
+<button onclick = "deleteTable()" class = "clearCart">Clear</button><br><br>
+<span class = "material-symbols-outlined" onclick = "back()">arrow_back</span>
+
+<script>
+    function incrementQuantity(button) {
+        var input = button.parentNode.querySelector('.quantity-input');
+        var value = parseInt(input.value, 10);
+        input.value = isNaN(value) ? 1 : value + 1;
+    }
+
+    function decrementQuantity(button) {
+        var input = button.parentNode.querySelector('.quantity-input');
+        var value = parseInt(input.value, 10);
+        input.value = isNaN(value) ? 1 : value - 1;
+        if (input.value < 1) input.value = 1;
+    }
+    
+    let button = document.querySelector('.checkout-btn');
+      
+    window.onload = function() {
+      let button = document.querySelector('.checkout-btn');
+      let van = localStorage.getItem('cleared');
+      if(localStorage.getItem('cleared') != null){
+        button.style.display = 'none';
+        
+        
+      } else {
+        button.style.display = 'block';
+      
+      }
+      let imageSrc = localStorage.getItem("productImageSrc");
+      let imageSrc1 = localStorage.getItem("productImageSrc1");
+      let imageSrc2 = localStorage.getItem("productImageSrc2");
+      let imageSrc3 = localStorage.getItem("productImageSrc3");
+      let imageSrc4 = localStorage.getItem("productImageSrc4");
+      let imageSrc5 = localStorage.getItem("productImageSrc5");
+      let imageSrc6 = localStorage.getItem("productImageSrc6");
+      let imageSrc7 = localStorage.getItem("productImageSrc7");
+      
+      
+      let price = localStorage.getItem("productPrice");
+      let price1 = localStorage.getItem("productPrice1");
+      let price2 = localStorage.getItem("productPrice2");
+      let price3 = localStorage.getItem("productPrice3");
+      let price4 = localStorage.getItem("productPrice4");
+      let price5 = localStorage.getItem("productPrice5");
+      let price6 = localStorage.getItem("productPrice6");
+      let price7 = localStorage.getItem("productPrice7");
+      
+      
+      
+      let name = localStorage.getItem("productName");
+      let name1 = localStorage.getItem("productName1");
+      let name2 = localStorage.getItem("productName2");
+      let name3 = localStorage.getItem("productName3");
+      let name4 = localStorage.getItem("productName4");
+      let name5 = localStorage.getItem("productName5");
+      let name6 = localStorage.getItem("productName6");
+      let name7 = localStorage.getItem("productName7");
+      
+      
+      
+      let cartImage1 = document.getElementById("cartImage1");
+      let cartImage2 = document.getElementById("cartImage2");
+      let cartImage3 = document.getElementById('cartImage3');
+      let cartImage4 = document.getElementById('cartImage4');
+      let cartImage5 = document.getElementById('cartImage5');
+      let cartImage6 = document.getElementById('cartImage6');
+      let cartImage7 = document.getElementById('cartImage7');
+      let cartImage8 = document.getElementById('cartImage8');
+      
+      let tray1 = document.getElementById('tray1');
+      let tray2 = document.getElementById('tray2');
+      let tray3 = document.getElementById('tray3');
+      let tray4 = document.getElementById('tray4');
+      let tray5 = document.getElementById('tray5');
+      let tray6 = document.getElementById('tray6');
+      let tray7 = document.getElementById('tray7');
+      let tray8 = document.getElementById('tray8');
+      
+      let productName = document.getElementById("productName");
+      let productName1 = document.getElementById("productName1");
+      let productName2 = document.getElementById('productName2');
+      let productName3 = document.getElementById('productName3');
+      let productName4 = document.getElementById('productName4');
+      let productName5 = document.getElementById('productName5');
+      let productName6 = document.getElementById('productName6');
+      let productName7 = document.getElementById('productName7');
+      
+      let pricer0 = document.getElementById('price0');
+      let pricer1 = document.getElementById('price1');
+      let pricer2 = document.getElementById('price2');
+      let pricer3 = document.getElementById('price3');
+      let pricer4 = document.getElementById('price4');
+      let pricer5 = document.getElementById('price5');
+      let pricer6 = document.getElementById('price6');
+      let pricer7 = document.getElementById('price7');
+      
+      let total0 = document.getElementById('total0');
+      let total1 = document.getElementById('total1');
+      let total2 = document.getElementById('total2');
+      let total3 = document.getElementById('total3');
+      let total4 = document.getElementById('total4');
+      let total5 = document.getElementById('total5');
+      let total6 = document.getElementById('total6');
+      let total7 = document.getElementById('total7');
+      
+      
+      
+      if(localStorage.getItem("tracker1") != null){
+      
+      tray1.style.display = "table-row";
+      productName.innerHTML = `${name}`;
+      cartImage1.src = `${imageSrc}`;
+      pricer0.innerHTML = `${price}`;
+      
+      }else {
+        
+      }
+      
+      if(localStorage.getItem("tracker2") != null){
+      
+      tray2.style.display = "table-row";
+      cartImage2.src = `${imageSrc1}`;
+      productName1.innerHTML = `${name1}`;
+      pricer1.innerHTML = `${price1}`;
+      
+      
+      }else{
+        
+      }
+      
+      
+      if(localStorage.getItem("tracker3") != null){
+      
+      tray3.style.display = "table-row";
+      cartImage3.src = `${imageSrc2}`;
+      productName2.innerHTML = `${name2}`;
+      pricer2.innerHTML = `${price2}`;
+      
+      
+      }else{
+        
+      }
+      
+      if(localStorage.getItem("tracker4") != null){
+      
+      tray4.style.display = "table-row";
+      cartImage4.src = `${imageSrc3}`;
+      productName3.innerHTML = `${name3}`;
+      pricer3.innerHTML = `${price3}`;
+      
+      
+      }else{
+        
+      }
+      
+      
+      if(localStorage.getItem("tracker5") != null){
+      
+      tray5.style.display = "table-row";
+      cartImage5.src = `${imageSrc4}`;
+      productName4.innerHTML = `${name4}`;
+      pricer4.innerHTML = `${price4}`;
+      
+      }else{
+        
+      }
+      
+      
+      if(localStorage.getItem("tracker6") != null){
+      
+      tray6.style.display = "table-row";
+      cartImage6.src = `${imageSrc5}`;
+      productName5.innerHTML = `${name5}`;
+      pricer5.innerHTML = `${price5}`;
+      
+      }else{
+        
+      }
+      
+      
+      if(localStorage.getItem("tracker7") != null){
+      
+      tray7.style.display = "table-row";
+      cartImage7.src = `${imageSrc6}`;
+      productName6.innerHTML = `${name6}`;
+      pricer6.innerHTML = `${price6}`;
+      
+      
+      }else{
+        
+      }
+      
+      
+      if(localStorage.getItem("tracker8") != null){
+      
+      tray8.style.display = "table-row";
+      cartImage8.src = `${imageSrc7}`;
+      productName7.innerHTML = `${name7}`;
+      pricer7.innerHTML = `${price7}`;
+      
+      
+      }else{
+        
+      }
+      
+      
+      
+
+      
+    }
+    function deleteTable(){
+      let table = document.getElementById("tab");
+      for(var i = table.rows.length - 1; i > 0; i--){
+        table.deleteRow(i);
+      }
+      localStorage.clear();
+      let key = "fan";
+      localStorage.setItem('cleared',key);
+      button.style.display = 'none';
+      
+    }
+    function back(){
+      history.back();
+    }
+    
+    let chechOut = document.querySelector('.checkout-btn');
+    chechOut.addEventListener('click',() => {
+      window.location.href = "https://sandbox-flw-web-v3.herokuapp.com/pay/b5rwqzzadyry";
+    });
+    
+    
+</script>
+
+</body>
+</html>
