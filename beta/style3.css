@@ -1273,7 +1273,7 @@ border:none;
       
       margin-left: 6% !important;
       
-      
+      z-index:5;
     }
 
 
@@ -1528,7 +1528,7 @@ border:none;
   display:none;
   overflow: hidden;
   animation: slideIn1 0.3s ease forwards;
-  z-index: 2;
+  z-index: 6;
   
 }
 @keyframes slideIn1{
