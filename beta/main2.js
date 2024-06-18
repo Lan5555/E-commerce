@@ -1068,7 +1068,7 @@ let list6 = ["realShoes/shoevenchy1.JPG", "realShoes/shoevenchy.JPG"];
 let list7 = ["realShoes/shoesued1.jpg", "realShoes/shoesued.jpg"];
 let list8 = ["realShoes/shoeretro2.jpg", "realShoes/shoeretro.jpg", "realShoes/shoeretro.jpg"];
 let list9 = ["realShoes/shoeree2.JPG", "realShoes/shoeree1.JPG", "realShoes/shoeree.JPG"];
-let list10 = ["realShoes/shoeogiy3.jpg", "realShoes/shoeogiy2.jpg", "realShoes/shoeogiy1.jpg", "realShoes/shoeogiy.jpg"];
+let list10 = ["realShoes/shoeogiy3.jpg", "realShoes/shoeogiy2.jpg", "realShoes/shoeogiy1.JPG", "realShoes/shoeogiy.JPG"];
 let list11 = ["realShoes/shoenikeB2.JPG", "realShoes/shoenikeB1.JPG", "realShoes/shoenikeB.JPG"];
 let list12 = ["realShoes/shoelv5.JPG", "realShoes/shoelv4.JPG", "realShoes/shoelv3.JPG", "realShoes/shoelv.JPG"];
 let list13 = ["realShoes/shoeloaf2.jpg", "realShoes/shoeloaf1.jpg", "realShoes/shoeloaf.jpg"];
@@ -1592,6 +1592,9 @@ function swapImageSource9() {
   let check2;
 window.onload = function (){
   
+   
+  
+  
   if(localStorage.getItem('count') != null){
     dis.style.display = "block";
     dis.classList.add('slideIn');
@@ -1755,6 +1758,7 @@ let value7;
 let value8;
 
 function run(event) {
+  
    value1 = event.target;
    value1.disabled = true; 
    
@@ -2251,4 +2255,4 @@ function coming (){
   iziToast.success({
     title:'Coming soon'
   });
-}
+}document.getElementById
