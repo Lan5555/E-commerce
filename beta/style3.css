@@ -1740,19 +1740,3 @@ font-family: 'playfair Display', serif;
   margin: 0 auto;
   }
   }
-
-@media(max-width: 485px){
-      .con {
-  max-height: 600px;
-  overflow-y: auto;
-    }
-
-
-
-  .con2 {
-  max-width: 700px; /* Reduced width */
-  margin: 0 auto;
-  }
-  
-}
-  
