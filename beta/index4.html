@@ -1,0 +1,973 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shopping Cart</title>
+
+<head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap">
+     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100" rel="stylesheet">
+     <link href="https://cdn.jsdelivr.net/npm/izitoast/dist/css/iziToast.min.css" rel="stylesheet"/>
+        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+
+
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: top;
+        top:20;
+        height: 100vh;
+        background-color: ghostwhite;
+        
+    }
+    table {
+        width: 80%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+        border-radius: 0px;
+        overflow-y :auto;
+        box-shadow: 0 15px 28px rgba(0, 0, 0, 0.5);
+        animation: slideInDown 0.5s ease;
+        font-family: 'playfair Display', serif;
+    }
+    h2 {
+    font-family: 'playfair Display', serif;
+    }
+    th, td {
+        padding: 2px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+        font-family: 'playfair Display', serif;
+        margin-right: 2px;
+    }
+    th {
+        background-color: #f2f2f2;
+    }
+    .checkout-btn {
+        padding: 10px 20px;
+        background-color: transparent;
+        color: black;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: 16px;
+        text-decoration: none;
+        border: 0.5px solid black;
+        backdrop-filter: blur(80px);
+        -webkit-backdrop-filter: blur(19px);
+        font-family:'playfair Display', serif;
+        display: none;
+        
+    }
+    .clearCart{
+      padding: 10px 20px;
+      margin-top: 10px;
+      background-color: transparent;
+      color: black;
+      border: 0.5px solid black;
+      border-radius: 7px;
+      cursor: pointer;
+      font-size: 16px;
+      text-decoration: none;
+      backdrop-filter: blur(80px);
+      -webkit-backdrop-filter: blur(19px);
+      font-family: 'playfair Display', serif;
+    }
+    .checkout-btn:hover {
+      color: white;
+        background-color: grey;
+    }
+    .quantity-btn {
+        background-color: #f2f2f2;
+        border: 0.5px solid grey;
+        cursor: pointer;
+        border-radius: 4px;
+        margin-bottom: 2px;
+        margin-top: 2px;
+    }
+    .quantity-input {
+        width: 40px;
+        text-align: center;
+    }
+    .product-image {
+        width: 100px;
+        border-radius: 20px;/* Adjust the width as needed */
+    }
+    @keyframes slideInDown {
+        from {
+            transform: translateY(-50px);
+            opacity: 0;
+        }
+        to {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+    .material-symbols-outlined{
+      font-size: 24pt;
+    }
+    
+    
+    #tray1,#tray2,#tray3,#tray4,#tray5,#tray6,#tray7,#tray8 {
+      display: none;
+    }
+    #link{
+      display: none;
+    }
+   
+</style>
+</head>
+<body>
+
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Confirmation</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" onclick = "proceed()">Proceed To Payment</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<u><h2>Shopping Cart</h2></u>
+
+<table id = "tab">
+  <thead>
+    <tr>
+      <th>Product</th>
+      <th>Price</th>
+      <th>Quantity</th>
+      <th>Total</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr id = "tray1">
+      <td>
+        <img id = "cartImage1"class="product-image">
+        <p id = "productName">Product 1</p>
+      </td>
+      <td id = "price0">$10.00</td>
+      <td>
+        <button class="quantity-btn" onclick="decrementQuantity1()">-</button>
+        <input class="quantity-input" type="number" value="1" id = "first">
+        <button class="quantity-btn" onclick="incrementQuantity1()">+</button>
+      </td>
+      <td id = "total0">$10.00</td>
+    </tr>
+    <tr id = "tray2">
+      <td>
+        <img id = "cartImage2"class="product-image">
+        <p id = "productName1">Product2</p>
+      </td>
+      <td id = "price1">$20.00</td>
+      <td>
+        <button class="quantity-btn" onclick="decrementQuantity2()">-</button>
+        <input class="quantity-input" type="number" value="1" id = "second">
+        <button class="quantity-btn" onclick="incrementQuantity2()">+</button>
+      </td>
+      <td id = "total1">$20.00</td>
+    </tr >
+        <tr id = "tray3">
+          <td>
+            <img id="cartImage3" class="product-image">
+            <p id="productName2">Product2</p>
+          </td>
+          <td id = "price2">$20.00</td>
+          <td>
+            <button class="quantity-btn" onclick="decrementQuantity3()">-</button>
+            <input class="quantity-input" type="number" value="1" id = "third">
+            <button class="quantity-btn" onclick="incrementQuantity3()">+</button>
+          </td>
+          <td id = "total2">$20.00</td>
+        </tr>
+            <tr id = "tray4">
+              <td>
+                <img id="cartImage4" class="product-image">
+                <p id="productName3">Product2</p>
+              </td>
+              <td id = "price3" >$20.00</td>
+              <td>
+                <button class="quantity-btn" onclick="decrementQuantity4()">-</button>
+                <input class="quantity-input" type="number" value="1" id = "fourth">
+                <button class="quantity-btn" onclick="incrementQuantity4()">+</button>
+              </td>
+              <td id = "total3">$20.00</td>
+            </tr>
+                <tr id = "tray5">
+                  <td>
+                    <img id="cartImage5" class="product-image">
+                    <p id="productName4">Product2</p>
+                  </td>
+                  <td id = "price4">$20.00</td>
+                  <td>
+                    <button class="quantity-btn" onclick="decrementQuantity5()">-</button>
+                    <input class="quantity-input" type="number" value="1" id = "fifth">
+                    <button class="quantity-btn" onclick="incrementQuantity5()">+</button>
+                  </td>
+                  <td id = "total4">$20.00</td>
+                </tr>
+                    <tr id = "tray6">
+                      <td>
+                        <img id="cartImage6" class="product-image">
+                        <p id="productName5">Product2</p>
+                      </td>
+                      <td id = "price5">$20.00</td>
+                      <td>
+                        <button class="quantity-btn" onclick="decrementQuantity6()">-</button>
+                        <input class="quantity-input" type="number" value="1" id = "sixth">
+                        <button class="quantity-btn" onclick="incrementQuantity6()">+</button>
+                      </td>
+                      <td id = "total5">$20.00</td>
+                    </tr>
+                        <tr id = "tray7">
+                          <td>
+                            <img id="cartImage7" class="product-image">
+                            <p id="productName6">Product2</p>
+                          </td>
+                          <td id = "price6">$20.00</td>
+                          <td>
+                            <button class="quantity-btn" onclick="decrementQuantity7()">-</button>
+                            <input class="quantity-input" type="number" value="1" id = "seventh">
+                            <button class="quantity-btn" onclick="incrementQuantity7()">+</button>
+                          </td>
+                          <td id = "total6">$20.00</td>
+                        </tr>
+                            <tr id = "tray8">
+                              <td>
+                                <img id="cartImage8" class="product-image">
+                                <p id="productName7">Product2</p>
+                              </td>
+                              <td id = "price7">$20.00</td>
+                              <td>
+                                <button class="quantity-btn" onclick="decrementQuantity8()">-</button>
+                                <input class="quantity-input" type="number" value="1" id = "eighth">
+                                <button class="quantity-btn" onclick="incrementQuantity8()">+</button>
+                              </td>
+                              <td id = "total7">$20.00</td>
+                            </tr>
+                            
+    <!-- Add more rows as needed -->
+  </tbody>
+  
+</table>
+
+<button class="checkout-btn">Checkout</button>
+<button onclick = "deleteTable()" class = "clearCart">Clear</button><br><br>
+<span class = "material-symbols-outlined" onclick = "back()">arrow_back</span>
+
+<script src="https://cdn.jsdelivr.net/npm/izitoast/dist/js/iziToast.min.js"></script>
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+    
+let number = 1;
+let number2 = 1;
+let number3 = 1;
+let number4 = 1;
+let number5 = 1;
+let number6 = 1;
+let number7 = 1;
+let number8 = 1;
+
+
+
+      let price = localStorage.getItem("productPrice");
+      let price1 = localStorage.getItem("productPrice1");
+      let price2 = localStorage.getItem("productPrice2");
+      let price3 = localStorage.getItem("productPrice3");
+      let price4 = localStorage.getItem("productPrice4");
+      let price5 = localStorage.getItem("productPrice5");
+      let price6 = localStorage.getItem("productPrice6");
+      let price7 = localStorage.getItem("productPrice7");
+
+
+      let total0 = document.getElementById('total0');
+      let total1 = document.getElementById('total1');
+      let total2 = document.getElementById('total2');
+      let total3 = document.getElementById('total3');
+      let total4 = document.getElementById('total4');
+      let total5 = document.getElementById('total5');
+      let total6 = document.getElementById('total6');
+      let total7 = document.getElementById('total7');
+
+
+       // Example string
+       let str1 = price;
+       let str2 = price1;
+       let str3 = price2;
+       let str4 = price3;
+       let str5 = price4;
+       let str6 = price5;
+       let str7 = price6;
+       let str8 = price7;
+
+       let numericPart1;
+       let numericPart2;
+       let numericPart3;
+       let numericPart4;
+       let numericPart5;
+       let numericPart6;
+       let numericPart7;
+       let numericPart8;
+       
+       let intValue;
+       let intValue1;
+       let intValue2;
+       let intValue3;
+       let intValue4;
+       let intValue5;
+       let intValue6;
+       let intValue7;
+
+
+
+
+    // Extract numeric part using regular expression
+      if(str1 != null){
+         numericPart1 = str1.match(/\d+/);
+         intValue = parseInt(numericPart1[0], 10);
+      }
+      if(str2 != null){
+        numericPart2 = str2.match(/\d+/);
+        intValue1 = parseInt(numericPart2[0], 10);
+
+      }
+      if(str3 != null){
+         numericPart3 = str3.match(/\d+/);
+         intValue2 = parseInt(numericPart3[0], 10);
+
+      }
+      if(str4 != null){
+         numericPart4 = str4.match(/\d+/);
+
+        intValue3 = parseInt(numericPart4[0], 10);
+      }
+      if(str5 != null){
+        numericPart5 = str5.match(/\d+/);
+      intValue4 = parseInt(numericPart5[0], 10);
+        
+      }
+      if(str6 != null){
+         numericPart6 = str6.match(/\d+/);
+        
+        intValue5 = parseInt(numericPart6[0], 10);
+      }
+      if(str7 != null){
+        numericPart7 = str7.match(/\d+/);
+        intValue6 = parseInt(numericPart7[0], 10);
+        
+      }
+      if(str8 != null){
+      numericPart8 = str8.match(/\d+/);
+        intValue7 = parseInt(numericPart8[0], 10);
+      }
+
+
+    // Convert extracted numeric part to integer
+       
+       
+       
+       
+       
+     
+    
+
+
+ function incrementQuantity1() {
+  number++;
+  let num1 = document.querySelector('#first');
+
+  if (number > 8) {
+    number = 8;
+    iziToast.warning({
+      title: 'You can\'t buy more than that',
+      timeOut: 2000,
+      progressBar: true
+    });
+  }
+
+  num1.value = number;
+  total0.innerHTML = `N${(intValue * number)}.00`;
+}
+
+function decrementQuantity1() {
+  number--;
+  let num1 = document.querySelector('#first');
+
+  if (number < 0) {
+    number = 0;
+    iziToast.warning({
+      title: 'You can\'t buy less than that',
+      timeOut: 2000,
+      progressBar: true
+    });
+  }
+
+  num1.value = number;
+  total0.innerHTML = `N${(intValue * number)}.00`;
+}
+    
+    
+
+
+function incrementQuantity2() {
+  number2++;
+  let num2 = document.querySelector('#second');
+  
+  if (number2 > 8) {
+    number2 = 8;
+    iziToast.warning({
+      title: 'You can\'t buy more than that',
+      timeOut: 2000,
+      progressBar: true
+    });
+  }
+
+  num2.value = number2;
+  total1.innerHTML = `N${(intValue1 * number2)}.00`;
+  
+    
+}
+
+
+function decrementQuantity2() {
+  number2--;
+  let num2 = document.querySelector('#second');
+    if (number2 < 0) {
+      number2 = 0;
+      iziToast.warning({
+        title: 'You can\'t buy less than that',
+        timeOut: 2000,
+        progressBar: true
+      });
+    }
+    
+    num2.value = number2;
+    total1.innerHTML = `N${(intValue1 * number2)}.00`;
+}
+
+function incrementQuantity3() {
+  number3++;
+  let num3 = document.querySelector('#third');
+  
+    if (number3 > 8) {
+    number3 = 8;
+    iziToast.warning({
+      title: 'You can\'t buy more than that',
+      timeOut: 2000,
+      progressBar: true
+    });
+  }
+
+  num3.value = number3;
+  total2.innerHTML = `N${(intValue2 * number3)}.00`;
+}
+
+
+function decrementQuantity3() {
+  number3--;
+  let num3 = document.querySelector('#third');
+    if (number3 < 0) {
+    number3 = 0;
+    iziToast.warning({
+      title: 'You can\'t buy less than that',
+      timeOut: 2000,
+      progressBar: true
+    });
+  }
+
+  num3.value = number3;
+  total2.innerHTML = `N${(intValue2 * number3)}.00`;
+}
+
+function incrementQuantity4() {
+  number4++;
+  let num4 = document.querySelector('#fourth');
+    if (number4 > 8) {
+    number4 = 8;
+    iziToast.warning({
+      title: 'You can\'t buy more than that',
+      timeOut: 2000,
+      progressBar: true
+    });
+  }
+
+  num4.value = number4;
+  total3.innerHTML = `N${(intValue3 * number4)}.00`;
+}
+
+
+function decrementQuantity4() {
+  number4--;
+  let num4 = document.querySelector('#fourth');
+    if (number4 < 0) {
+    number4 = 0;
+    iziToast.warning({
+      title: 'You can\'t buy less than that',
+      timeOut: 2000,
+      progressBar: true
+    });
+  }
+
+  num4.value = number4;
+  total3.innerHTML = `N${(intValue3 * number4)}.00`;
+}
+
+function incrementQuantity5() {
+  number5++;
+  let num5 = document.querySelector('#fifth');
+    if (number5 > 8) {
+    number5 = 8;
+    iziToast.warning({
+      title: 'You can\'t buy more than that',
+      timeOut: 2000,
+      progressBar: true
+    });
+  }
+
+  num5.value = number5;
+  total4.innerHTML = `N${(intValue4 * number5)}.00`;
+}
+
+
+function decrementQuantity5() {
+  number5--;
+  let num5 = document.querySelector('#fifth');
+    if (number5 < 0) {
+    number5 = 0;
+    iziToast.warning({
+      title: 'You can\'t buy less than that',
+      timeOut: 2000,
+      progressBar: true
+    });
+  }
+
+  num5.value = number5;
+  total4.innerHTML = `N${(intValue4 * number5)}.00`;
+}
+
+function incrementQuantity6() {
+  number6++;
+  let num6 = document.querySelector('#sixth');
+    if (number6 > 8) {
+    number6 = 8;
+    iziToast.warning({
+      title: 'You can\'t buy more than that',
+      timeOut: 2000,
+      progressBar: true
+    });
+  }
+
+  num6.value = number6;
+  total5.innerHTML = `N${(intValue5 * number6)}.00`;
+}
+
+
+function decrementQuantity6() {
+  number6--;
+  let num6 = document.querySelector('#sixth');
+   if (number6 < 0) {
+    number6 = 0;
+    iziToast.warning({
+      title: 'You can\'t buy less than that',
+      timeOut: 2000,
+      progressBar: true
+    });
+  }
+
+  num6.value = number6;
+  total5.innerHTML = `N${(intValue5 * number6)}.00`;
+}
+
+function incrementQuantity7() {
+  number7++;
+  let num7 = document.querySelector('#seventh');
+    if (number7 > 8) {
+    number7 = 8;
+    iziToast.warning({
+      title: 'You can\'t buy more than that',
+      timeOut: 2000,
+      progressBar: true
+    });
+  }
+
+  num7.value = number7;
+  total6.innerHTML = `N${(intValue6 * number7)}.00`;
+}
+
+
+function decrementQuantity7() {
+  number7--;
+  let num7 = document.querySelector('#seventh');
+    if (number7 < 0) {
+    number7 = 0;
+    iziToast.warning({
+      title: 'You can\'t buy less than that',
+      timeOut: 2000,
+      progressBar: true
+    });
+  }
+
+  num7.value = number7;
+  total6.innerHTML = `N${(intValue6 * number7)}.00`;
+}
+
+function incrementQuantity8() {
+  number8++;
+  let num8 = document.querySelector('#eighth');
+    if (number8 > 8) {
+    number8 = 8;
+    iziToast.warning({
+      title: 'You can\'t buy more than that',
+      timeOut: 2000,
+      progressBar: true
+    });
+  }
+
+  num8.value = number8;
+  total7.innerHTML = `N${(intValue7 * number8)}.00`;
+    
+}
+
+
+function decrementQuantity8() {
+  number8--;
+  let num8 = document.querySelector('#eighth');
+    if (number8 < 0) {
+    number8 = 0;
+    iziToast.warning({
+      title: 'You can\'t buy less than that',
+      timeOut: 2000,
+      progressBar: true
+    });
+  }
+
+  num8.value = number8;
+  total7.innerHTML = `N${(intValue7 * number8)}.00`;
+}
+    
+    let button = document.querySelector('.checkout-btn');
+
+  let finalPayout;
+  
+    window.onload = function() {
+      
+
+     
+      let van = localStorage.getItem('cleared');
+      if(localStorage.getItem('cleared') != null){
+        button.style.display = 'none';
+        
+        
+      } else {
+        button.style.display = 'block';
+      
+      }
+
+      // cart collection
+      let imageSrc = localStorage.getItem("productImageSrc");
+      let imageSrc1 = localStorage.getItem("productImageSrc1");
+      let imageSrc2 = localStorage.getItem("productImageSrc2");
+      let imageSrc3 = localStorage.getItem("productImageSrc3");
+      let imageSrc4 = localStorage.getItem("productImageSrc4");
+      let imageSrc5 = localStorage.getItem("productImageSrc5");
+      let imageSrc6 = localStorage.getItem("productImageSrc6");
+      let imageSrc7 = localStorage.getItem("productImageSrc7");
+      
+      
+      
+      
+      
+      
+      let name = localStorage.getItem("productName");
+      let name1 = localStorage.getItem("productName1");
+      let name2 = localStorage.getItem("productName2");
+      let name3 = localStorage.getItem("productName3");
+      let name4 = localStorage.getItem("productName4");
+      let name5 = localStorage.getItem("productName5");
+      let name6 = localStorage.getItem("productName6");
+      let name7 = localStorage.getItem("productName7");
+      
+      
+
+
+      //assignment
+    let cartImage1 = document.getElementById("cartImage1");
+      let cartImage2 = document.getElementById("cartImage2");
+      let cartImage3 = document.getElementById('cartImage3');
+      let cartImage4 = document.getElementById('cartImage4');
+      let cartImage5 = document.getElementById('cartImage5');
+      let cartImage6 = document.getElementById('cartImage6');
+      let cartImage7 = document.getElementById('cartImage7');
+      let cartImage8 = document.getElementById('cartImage8');
+      
+      let tray1 = document.getElementById('tray1');
+      let tray2 = document.getElementById('tray2');
+      let tray3 = document.getElementById('tray3');
+      let tray4 = document.getElementById('tray4');
+      let tray5 = document.getElementById('tray5');
+      let tray6 = document.getElementById('tray6');
+      let tray7 = document.getElementById('tray7');
+      let tray8 = document.getElementById('tray8');
+      
+      let productName = document.getElementById("productName");
+      let productName1 = document.getElementById("productName1");
+      let productName2 = document.getElementById('productName2');
+      let productName3 = document.getElementById('productName3');
+      let productName4 = document.getElementById('productName4');
+      let productName5 = document.getElementById('productName5');
+      let productName6 = document.getElementById('productName6');
+      let productName7 = document.getElementById('productName7');
+      
+      let pricer0 = document.getElementById('price0');
+      let pricer1 = document.getElementById('price1');
+      let pricer2 = document.getElementById('price2');
+      let pricer3 = document.getElementById('price3');
+      let pricer4 = document.getElementById('price4');
+      let pricer5 = document.getElementById('price5');
+      let pricer6 = document.getElementById('price6');
+      let pricer7 = document.getElementById('price7');
+      
+     
+      
+      
+
+
+    
+     finalPayout = [];
+
+   
+      if(localStorage.getItem("tracker1") != null){
+      
+      tray1.style.display = "table-row";
+      productName.innerHTML = `${name}`;
+      cartImage1.src = `${imageSrc}`;
+      pricer0.innerHTML = `${price}`;
+      total0.innerHTML = `${price}`;
+      finalPayout.push((intValue * number));
+        
+      }else {
+
+      }
+    
+      if(localStorage.getItem("tracker2") != null){
+      
+      tray2.style.display = "table-row";
+      cartImage2.src = `${imageSrc1}`;
+      productName1.innerHTML = `${name1}`;
+      pricer1.innerHTML = `${price1}`;
+      total1.innerHTML = `${price1}`;
+      finalPayout.push((intValue1 * number2));
+      
+      }else{
+        
+      }
+      
+      
+      if(localStorage.getItem("tracker3") != null){
+      
+      tray3.style.display = "table-row";
+      cartImage3.src = `${imageSrc2}`;
+      productName2.innerHTML = `${name2}`;
+      pricer2.innerHTML = `${price2}`;
+      total2.innerHTML = `${price2}`;
+      finalPayout.push((intValue2 * number3));
+      
+      }else{
+        
+      }
+      
+      if(localStorage.getItem("tracker4") != null){
+      
+      tray4.style.display = "table-row";
+      cartImage4.src = `${imageSrc3}`;
+      productName3.innerHTML = `${name3}`;
+      pricer3.innerHTML = `${price3}`;
+      total3.innerHTML = `${price3}`;
+      finalPayout.push((intValue3 * number4));
+      
+      }else{
+        
+      }
+      
+      
+      if(localStorage.getItem("tracker5") != null){
+      
+      tray5.style.display = "table-row";
+      cartImage5.src = `${imageSrc4}`;
+      productName4.innerHTML = `${name4}`;
+      pricer4.innerHTML = `${price4}`;
+
+      total4.innerHTML = `${price4}`;
+      finalPayout.push((intValue4 * number5));
+      
+      }else{
+        
+      }
+      
+      
+      if(localStorage.getItem("tracker6") != null){
+      
+      tray6.style.display = "table-row";
+      cartImage6.src = `${imageSrc5}`;
+      productName5.innerHTML = `${name5}`;
+      pricer5.innerHTML = `${price5}`;
+      total5.innerHTML = `${price5}`;
+      finalPayout.push((intValue5 * number6));
+      
+      }else{
+        
+      }
+      
+      
+      if(localStorage.getItem("tracker7") != null){
+      
+      tray7.style.display = "table-row";
+      cartImage7.src = `${imageSrc6}`;
+      productName6.innerHTML = `${name6}`;
+      pricer6.innerHTML = `${price6}`;
+      total6.innerHTML = `${price6}`;
+      finalPayout.push((intValue6 * number7));
+      
+      
+      }else{
+        
+      }
+      
+      
+      if(localStorage.getItem("tracker8") != null){
+      
+      tray8.style.display = "table-row";
+      cartImage8.src = `${imageSrc7}`;
+      productName7.innerHTML = `${name7}`;
+      pricer7.innerHTML = `${price7}`;
+      total7.innerHTML = `${price7}`;
+      finalPayout.push((intValue7 * number8));
+      
+      
+      }else{
+        
+      }
+      
+      
+      
+
+      
+    }
+  
+    function deleteTable(){
+      let table = document.getElementById("tab");
+      for(var i = table.rows.length - 1; i > 0; i--){
+        table.deleteRow(i);
+      }
+      if(localStorage.getItem('count') != null && localStorage.getItem('currentPage') != null){
+      clearLocalStorageExcept(["currentPage"]);
+      }else{
+        localStorage.clear();
+      }
+      let key = "fan";
+      localStorage.setItem('cleared',key);
+      button.style.display = 'none';
+      
+    }
+    function back(){
+      history.back();
+    }
+    
+    
+    function clearLocalStorageExcept(exceptKeys) {
+      // Step 1: Retrieve the values of the items to keep
+      const itemsToKeep = {};
+      exceptKeys.forEach(key => {
+        const value = localStorage.getItem(key);
+        if (value !== null) {
+          itemsToKeep[key] = value;
+        }
+      });
+    
+      // Step 2: Clear the entire localStorage
+      localStorage.clear();
+    
+      // Step 3: Restore the kept items back into localStorage
+      Object.keys(itemsToKeep).forEach(key => {
+        localStorage.setItem(key, itemsToKeep[key]);
+      });
+    }
+    
+    // Usage example: Keep 'item1' and 'item2'
+    
+    
+    
+    
+    
+    
+    
+    
+    let chechOut = document.querySelector('.checkout-btn');
+    chechOut.addEventListener('click',() => {
+      
+      retrieveTotal();
+      iziToast.warning({
+        title:'Infotmation',
+        message:'Due to security reasons, We have limited the number of purchases to 1. This would change in subsequent updates!',
+          timeOut:5000,
+          progressBar:true
+      });
+      
+    });
+    
+    let payment = 0;
+    let modal = document.getElementById('link');
+    
+     function retrieveTotal(){
+     
+        finalPayout.forEach((element,index) => {
+          payment += element;
+          
+        });
+        
+         $('.modal-body').text(`Total Amount: NGN ${payment}.00`);
+          $('#exampleModalCenter').modal('show');
+        localStorage.setItem('totalAmount',payment);
+        
+          finalPayout = [];
+    }
+    function proceed(){
+      window.location.href = "flutterWave.html";
+    }
+    
+</script>
+
+</body>
+</html>

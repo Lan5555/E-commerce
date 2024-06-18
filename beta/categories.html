@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+
+
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11">
+ <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css">
+ 
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+ 
+ 
+   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100" rel="stylesheet">
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet">
+   
+   
+       <!-- Favicon -->
+
+    <link href="img/favicon.ico" rel="icon">
+
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">  
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/izitoast/dist/css/iziToast.min.css" rel="stylesheet"/>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
+<style>
+body{
+  border-radius: 10px;
+  border:'none';
+}
+.tab .nav-tabs {
+    border-bottom:0 none;
+}
+.tab .nav-tabs li a{
+    position: relative;
+    padding: 15px;
+    color: white;
+    font-size: 17px;
+    z-index: 1;
+}
+.tab .nav-tabs li a:hover{
+    background:transparent;
+    border:1px solid transparent;
+}
+.tab .nav-tabs li a:before{
+    content: "";
+    width:100%;
+    height:100%;
+    position:absolute;
+    bottom: 8px;
+    left:-2px;
+    background: black;
+    
+    border: 1px solid #d3d3d3;
+    border-bottom: 0px none;
+    border-bottom-left-radius:5px;
+    border-bottom-right-radius:5px;
+    border-top-right-radius:25px;
+    border-top-left-radius:25px;
+    transform-origin: left center 0;
+    transform: perspective(6px) rotateX(3deg);
+    z-index:-30;
+}
+.tab .nav-tabs li{
+    margin-right: 15px;
+}
+.tab .nav-tabs li.active a:before{
+    background: grey;
+}
+.tab .nav-tabs li.active a,
+.tab .nav-tabs li.active a:focus,
+.tab .nav-tabs li.active a:hover{
+    border:1px solid transparent;
+    background:transparent;
+    color: white;
+    font-weight:300;
+    z-index: 2;
+}
+.tab-content .tab-pane{
+    border-bottom-left-radius:15px;
+    border-bottom-right-radius:15px;
+    border: 1px solid #804000;
+    padding: 20px;
+    background:white;
+    line-height: 22px;
+}
+.tab-content .tab-pane h4{
+    margin-top: 0;
+    font-weight:700;
+    font-size: 20px;
+}
+@media only screen and (max-width: 767px) {
+    .tab .nav-tabs li a{
+        padding: 15px 10px;
+        font-size: 14px;
+    }
+    .tab .nav-tabs li a:before{
+        bottom: 6px;
+    }
+}
+@media only screen and (max-width: 499px) {
+    .tab .nav-tabs li{
+        width:100%;
+        margin-bottom: 5px;
+        margin-top: 5px;
+    }
+    .tab .nav-tabs li a:before{
+        bottom: 0;
+        transform: none;
+        border-bottom: 1px solid #408080;
+    }
+}
+#ip{
+  font-family: 'playfair Display', serif;
+  text-align: center;
+  font-size: 20px;
+  text-shadow: 4px 6px 8px;
+}
+#btn1,#btn2,#btn3,#btn4,#btn5,#btn6,#btn7,#btn8,#btn9,#btn10,#btn11,#btn12 {
+  
+  background-color: transparent;
+  border: 0.3px solid black;
+  color:white;
+  backdrop-filter: blur(3px);
+  text-shadow: 4px 6px 8px;
+  transition: background-color 1s ease;
+}
+.container{
+  animation: slideIn 2s ease-in-out;
+}
+@keyframes slideIn {
+  from {
+    transform: translateX(100px);
+  }
+    to {
+    transform: translateX(0px);
+  }
+}
+</style>
+
+</head>
+
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-8">
+            <div class="tab" role="tabpanel">
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs" role="tablist">
+                    <li role="presentation" class="active"><a href="#javatab" aria-controls="home" role="tab" data-toggle="tab">Foot Ware</a></li>
+                    <li role="presentation"><a href="#jquerytab" aria-controls="profile" role="tab" data-toggle="tab">Marching Fits</a></li>
+                    <li role="presentation"><a href="#ctab" aria-controls="messages" role="tab" data-toggle="tab">Shirts</a></li>
+                    <li role="presentation"><a href="#mysqltab" aria-controls="settings" role="tab" data-toggle="tab">Trousers</a></a></li>
+                </ul>
+                <!-- Tab panes content goes here-->
+                <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane fade-in active" id="javatab">
+                        
+                        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                          <!-- Indicators -->
+                          <ol class="carousel-indicators">
+                            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                            <li data-target="#myCarousel" data-slide-to="1"></li>
+                            <li data-target="#myCarousel" data-slide-to="2"></li>
+                          </ol>
+                        
+                          <!-- Wrapper for slides -->
+                          <div class="carousel-inner">
+                            <div class="item active">
+                              <img src="shoes/shoe1.jpg" alt="Chania">
+                              <div class="carousel-caption">
+                                <h3></h3>
+                                <p>We'v got you covered!</p>
+                                
+                                <button id = "btn1" type="button" class="btn btn-primary">Select</button>
+                              </div>
+                            </div>
+                        
+                            <div class="item">
+                              <img src="shoes/shoe2.jpg" alt="Chicago">
+                              <div class="carousel-caption">
+                                <h3></h3>
+                                <p>Just a click away!</p>
+                              
+                                <button id = "btn2" type="button" class="btn btn-primary">Select</button></div>
+                            </div>
+                        
+                            <div class="item">
+                              <img src="shoes/shoe3.jpg" alt="New York">
+                              <div class="carousel-caption">
+                                <h3>Fashion Junkie</h3>
+                                <p>We love the Big Apple!</p>
+                                  <button id = "btn3" type="button" class="btn btn-primary">Select</button>
+                              </div>
+                            </div>
+                          </div>
+                        
+                          <!-- Left and right controls -->
+                          <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                            <span class="glyphicon glyphicon-chevron-left"></span>
+                            <span class="sr-only">Previous</span>
+                          </a>
+                          <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                            <span class="glyphicon glyphicon-chevron-right"></span>
+                            <span class="sr-only">Next</span>
+                          </a>
+                        </div>
+                        
+                    </div>
+                    <div role="tabpanel" class="tab-pane fade" id="jquerytab">
+                       
+                       <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                         <!-- Indicators -->
+                         <ol class="carousel-indicators">
+                           <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                           <li data-target="#myCarousel" data-slide-to="1"></li>
+                           <li data-target="#myCarousel" data-slide-to="2"></li>
+                         </ol>
+                       
+                         <!-- Wrapper for slides -->
+                         <div class="carousel-inner">
+                           <div class="item active">
+                             <img src="fits/fit1.jpg" alt="Chania">
+                             <div class="carousel-caption">
+                               <h3></h3>
+                               <p>We'v got you covered!</p>
+                                 <button id = "btn4" type="button" class="btn btn-primary">Select</button>
+                             </div>
+                             
+                           </div>
+                       
+                           <div class="item">
+                             <img src="fits/fit2.jpg" alt="Chicago">
+                             <div class="carousel-caption">
+                               <h3></h3>
+                               <p>Just a click away!</p>
+                                 <button id = "btn5" type="button" class="btn btn-primary">Select</button>
+                             </div>
+                           </div>
+                       
+                           <div class="item">
+                             <img src="fits/fit3.jpg" alt="New York">
+                             <div class="carousel-caption">
+                               <h3>Fashion Junkie</h3>
+                               <p>We love the Big Apple!</p>
+                                 <button id = "btn6" type="button" class="btn btn-primary">Select</button>
+                             </div>
+                           </div>
+                         </div>
+                       
+                         <!-- Left and right controls -->
+                         <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                           <span class="glyphicon glyphicon-chevron-left"></span>
+                           <span class="sr-only">Previous</span>
+                         </a>
+                         <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                           <span class="glyphicon glyphicon-chevron-right"></span>
+                           <span class="sr-only">Next</span>
+                         </a>
+                       </div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane fade" id="ctab">
+                        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                          <!-- Indicators -->
+                          <ol class="carousel-indicators">
+                            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                            <li data-target="#myCarousel" data-slide-to="1"></li>
+                            <li data-target="#myCarousel" data-slide-to="2"></li>
+                          </ol>
+                        
+                          <!-- Wrapper for slides -->
+                          <div class="carousel-inner">
+                            <div class="item active">
+                              <img src="shirts/shirt1.jpg" alt="Chania">
+                              <div class="carousel-caption">
+                                <h3></h3>
+                                <p>We'v got you covered!</p>
+                                <button id = "btn7" type="button" class="btn btn-primary">Select</button>
+                              </div>
+                            </div>
+                        
+                            <div class="item">
+                              <img src="shirts/shirt2.jpg" alt="Chicago">
+                              <div class="carousel-caption">
+                                <h3></h3>
+                                <p>Just a click away!</p>
+                                  <button id = "btn8" type="button" class="btn btn-primary">Select</button>
+                              </div>
+                            </div>
+                        
+                            <div class="item">
+                              <img src="shirts/shirt3.jpg" alt="New York">
+                              <div class="carousel-caption">
+                                <h3>Fashion Junkie</h3>
+                                <p>We love the Big Apple!</p>
+                                  <button id = "btn9" type="button" class="btn btn-primary">Select</button>
+                              </div>
+                            </div>
+                          </div>
+                        
+                          <!-- Left and right controls -->
+                          <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                            <span class="glyphicon glyphicon-chevron-left"></span>
+                            <span class="sr-only">Previous</span>
+                          </a>
+                          <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                            <span class="glyphicon glyphicon-chevron-right"></span>
+                            <span class="sr-only">Next</span>
+                          </a>
+                        </div>
+                        
+                    </div>
+                    <div role="tabpanel" class="tab-pane tada" id="mysqltab">
+                      
+                      
+                      
+                      <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                        <!-- Indicators -->
+                        <ol class="carousel-indicators">
+                          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                          <li data-target="#myCarousel" data-slide-to="1"></li>
+                          <li data-target="#myCarousel" data-slide-to="2"></li>
+                        </ol>
+                      
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner">
+                          <div class="item active">
+                            <img src="trousers/jean1.jpg" alt="Chania">
+                            <div class="carousel-caption">
+                              <h3></h3>
+                              <p>We'v got you covered!</p>
+                                <button id = "btn10" type="button" class="btn btn-primary">Select</button>
+                            </div>
+                          </div>
+                      
+                          <div class="item">
+                            <img src="trousers/jean2.jpg" alt="Chicago">
+                            <div class="carousel-caption">
+                              <h3></h3>
+                              <p>Just a click away!</p>
+                                <button id = "btn11" type="button" class="btn btn-primary">Select</button>
+                            </div>
+                          </div>
+                      
+                          <div class="item">
+                            <img src="trousers/jean3.jpg" alt="New York">
+                            <div class="carousel-caption">
+                              <h3>Fashion Junkie</h3>
+                              <p>We love the Big Apple!</p>
+                                <button id = "btn12" type="button" class="btn btn-primary">Select</button>
+                            </div>
+                          </div>
+                        </div>
+                      
+                        <!-- Left and right controls -->
+                        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                          <span class="glyphicon glyphicon-chevron-left"></span>
+                          <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                          <span class="glyphicon glyphicon-chevron-right"></span>
+                          <span class="sr-only">Next</span>
+                        </a>
+                      </div>
+                      
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<p id = "ip">Make your pick</p>
+</body>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>  
+  
+ <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+ <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Contact Javascript File -->
+    <script src="mail/jqBootstrapValidation.min.js"></script>
+    <script src="mail/contact.js"></script>
+    
+<script src="https://cdn.jsdelivr.net/npm/izitoast/dist/js/iziToast.min.js"></script>
+    
+    
+    <script>
+      window.onload = (() => {
+        let btn1 = document.getElementById('btn1');
+        let btn2 = document.getElementById('btn2');
+        let btn3 = document.getElementById('btn3');
+        let btn4 = document.getElementById('btn4');
+        let btn5 = document.getElementById('btn5');
+        let btn6 = document.getElementById('btn6');
+        let btn7 = document.getElementById('btn7');
+        let btn8 = document.getElementById('btn8');
+        let btn9 = document.getElementById('btn9');
+        let btn10 = document.getElementById('btn10');
+        let btn11 = document.getElementById('btn11');
+        let btn12 = document.getElementById('btn12');
+        
+        //first button
+        btn1.addEventListener('click', () => {
+          localStorage.setItem('boots',1);
+        });
+        btn2.addEventListener('click', () => {
+            localStorage.setItem('boots',1);
+        });
+        btn3.addEventListener('click', () => {
+            localStorage.setItem('boots',1);
+        });
+        
+        //second button
+        btn4.addEventListener('click', () => {
+        
+        });
+        btn5.addEventListener('click', () => {
+        
+        });
+        btn6.addEventListener('click', () => {
+        
+     
+        });
+           //third button
+        btn7.addEventListener('click', () => {
+        
+        });
+        btn8.addEventListener('click', () => {
+        
+        });
+        btn9.addEventListener('click', () => {
+        
+        });
+        
+        //fourth button
+        btn10.addEventListener('click', () => {
+        
+        });
+        btn11.addEventListener('click', () => {
+        
+        });
+        btn12.addEventListener('click', () => {
+        
+        });
+        Toast();
+        
+      });
+      function Toast(){
+        iziToast.success({
+          title:'Click on select!',
+          timeout:5000,
+          progressBar:true,
+          
+        });
+      }
+    </script>
+</html>

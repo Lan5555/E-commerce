@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop</title>
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap">
+  
+  
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100" rel="stylesheet">
+    <link rel="stylesheet" href="style3.css">
+    
+    <link href="https://cdn.jsdelivr.net/npm/izitoast/dist/css/iziToast.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+    
+
+</head>
+<body>
+
+  <div class = "up">
+  <span class="material-symbols-outlined" id="menu">menu</span>
+  <span class="material-symbols-outlined" id="acc" onclick = "coming()">account_circle</span>
+  <i class = "material-icons" id = "star">star</i>
+  
+  </div>
+  <button id = "work">Categories</button>
+  
+  
+  
+  <div id = "cat">
+   <iframe src = "categories.html"></iframe>
+  </div>
+  
+ 
+  
+    <div id = "Amount">
+        <p id = "num"></p>
+      </div>
+    <div class="buttomIcons">
+  
+  
+  
+      <span class="material-symbols-outlined box" id="home" onclick = "home()">home</span>
+      <span class="material-symbols-outlined box" id="search"onclick = search()>search</span>
+    
+      <span class="material-symbols-outlined box" id="cart">shopping_cart</span>
+      <span class="material-symbols-outlined box" id="ship">local_shipping</span>
+      <span class="material-symbols-outlined box" id="set" onclick="settings()">settings</span>
+    </div>
+  
+  
+  
+  
+    <div id = "names">
+    <p id = "itemNames"></p>
+  </div>
+  
+  <div class="dropdown1" id="dropdown1">
+    <h1 id = "lan1">Fasion Junkie</h1>
+    <p id = "collect1"></p>
+    <a href="#option1">Explore</a>
+    <a href="#option2">About us</a>
+        
+  </div>
+  
+  <div class="dropdown" id="dropdown">
+    <h1 id = "lan">Fasion Junkie</h1>
+    <p id = "collect"></p>
+    <a href="#option1">Explore</a>
+    <a href="#option2">About us</a>
+  </div>
+
+  <div id = "right-content">
+    <iframe id = "frame" src = "announcement.html"></iframe>
+  </div>
+  
+  
+    <button id = "returner">Back</button>
+ <div class="container con2">
+  <div class="con">
+    
+    <div class="row">
+      
+      <div class="col-md-4">
+        <div class="item1 mb-4">
+          <img id="img0" class="img-fluid">
+          <h1 id="f"></h1>
+          <u><p id="price0"></p></u>
+          <p id="info1"></p>
+          <button onclick="run(event)">Add to cart 🛒</button>
+          <button id="clear1" onclick="clearCart1()">Clear</button>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="item1 mb-4">
+          <img id="img1" class="img-fluid">
+          <h1 id="g"></h1>
+          <u><p id="price1"></p></u>
+          <p id="info2"></p>
+          <button onclick="run2(event)">Add to cart 🛒</button>
+          <button id="clear2" onclick="clearCart2()">Clear</button>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="item1 mb-4">
+          <img id="img2" class="img-fluid">
+          <h1 id="h"></h1>
+          <u><p id="price2"></p></u>
+          <p id="info3"></p>
+          <button onclick="run3(event)">Add to cart 🛒</button>
+          <button id="clear3" onclick="clearCart3()">Clear</button>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="item1 mb-4">
+          <img id="img3" class="img-fluid">
+          <h1 id="i"></h1>
+          <u><p id="price3"></p></u>
+          <p id="info4"></p>
+          <button onclick="run4(event)">Add to cart 🛒</button>
+          <button id="clear4" onclick="clearCart4()">Clear</button>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="item1 mb-4">
+          <img id="img4" class="img-fluid">
+          <h1 id="j"></h1>
+          <u><p id="price4"></p></u>
+          <p id="info5"></p>
+          <button onclick="run5(event)">Add to cart 🛒</button>
+          <button id="clear5" onclick="clearCart5()">Clear</button>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="item1 mb-4">
+          <img id="img5" class="img-fluid">
+          <h1 id="k"></h1>
+          <u><p id="price5"></p></u>
+          <p id="info6"></p>
+          <button onclick="run6(event)">Add to cart 🛒</button>
+          <button id="clear6" onclick="clearCart6()">Clear</button>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="item1 mb-4">
+          <img id="img6" class="img-fluid">
+          <h1 id="l"></h1>
+          <u><p id="price6"></p></u>
+          <p id="info7"></p>
+          <button onclick="run7(event)">Add to cart 🛒</button>
+          <button id="clear7" onclick="clearCart7()">Clear</button>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="item1 mb-4">
+          <img id="img7" class="img-fluid">
+          <h1 id="m"></h1>
+          <u><p id="price7"></p></u>
+          <p id="info8">.</p>
+           <button onclick="run8(event)">Add to cart 🛒</button>
+          <button id="clear8" onclick="clearCart8()">Clear</button><br>
+          <button id = "next">Next page</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+  <div id="pop">
+    <h5 class="change">Change Background color</h5>
+    <form id="colorForm">
+      <input type="radio" id="blue" name="color" value="lightblue">
+      <label for="blue" class="color-label">Blue</label><br>
+      
+      <input type="radio" id="grey" name="color" value="grey">
+      <label for="grey" class="color-label">Grey</label><br>
+      
+      <input type="radio" id="brown" name="color" value="pink">
+      <label for="pink" class="color-label">Pink</label><br>
+      
+      <input type="radio" id="white" name="color" value="white">
+      <label for="white" class="color-label">White</label><br>
+      
+      <input type="radio" id="red" name="color" value="lightgreen">
+      <label for="green" class="color-label">Green</label><br>
+      
+      <input type="radio" id="yellow" name="color" value="lightyellow">
+      <label for="yellow" class="color-label">Yellow</label><br>
+    </form>
+    <p id="backer"><-</p>
+  </div>
+
+<div class = "holder">
+<div class = "loader"></div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/izitoast/dist/js/iziToast.min.js"></script>
+
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+      
+
+  <script src = "main2.js">
+    
+  </script>
+</body>
+</html>

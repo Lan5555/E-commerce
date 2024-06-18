@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Search Bar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+        <link href="https://cdn.jsdelivr.net/npm/izitoast/dist/css/iziToast.min.css" rel="stylesheet"/>
+    
+</head>
+<body>
+<style>
+  /* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image:url('fits/fit1.jpg');
+    font-family: 'Arial', sans-serif;
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-position: center;
+}
+
+.container {
+    text-align: center;
+    width: 90%; /* Added to make container responsive */
+    max-width: 500px; /* Added to prevent container from being too wide */
+}
+
+.attention-text {
+    font-size: 2.5rem;
+    color: #fff;
+    margin-bottom: 20px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%; /* Adjusted to make search bar responsive */
+}
+
+.search-input {
+    width: 100%; /* Adjusted to make input responsive */
+    max-width: 300px; /* Added max-width to control input size */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 50px;
+    outline: none;
+    font-size: 1rem;
+    transition: all 0.4s ease-in-out;
+}
+
+.search-input:focus {
+    max-width: 400px; /* Adjusted max-width to control expansion on focus */
+    transition: all 0.4s ease-in-out;
+}
+
+.search-button {
+    position: absolute;
+    right: 10px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    outline: none;
+    color: #ff9a9e;
+    font-size: 1.2rem;
+    transition: color 0.3s ease-in-out;
+}
+
+.search-button:hover {
+    color: #fff;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .attention-text {
+        font-size: 2rem;
+    }
+    .search-input {
+        max-width: 100%; /* Full width for smaller screens */
+    }
+    .search-input:focus {
+        max-width: 100%; /* Full width on focus for smaller screens */
+    }
+}
+</style>
+<div class="container">
+    <h1 class="attention-text">Find What You're Looking For</h1>
+    <div class="search-bar">
+        <input type="text" class="search-input" placeholder="Search...">
+        <button class="search-button"><i class="fas fa-search"></i></button>
+    </div>
+</div>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/izitoast/dist/js/iziToast.min.js"></script>
+
+
+<script>
+  let fileResources = [
+  {
+  name:"Ruby rings", imageSrc: "lily.jpg", price: `N${4000}.00`
+  },
+  {
+    name:"secondTest",imageSrc:"jean.jpeg",price: `N${50000}.00`
+  },
+  {
+    name:"Ice",imageSrc:"jewel.jpg",price: `N${5000000}.00`
+  },
+  {
+    name:"water",imageSrc:"boot.jpg",price: `N${1000}.00`
+  },
+  {
+    name:"waterLime",imageSrc:"hood.jpg",price: `N${600}.00`
+  },
+  {
+    name:"waterCake",imageSrc:"boot.jpg",price: `N${8000}.00`
+  },
+  {
+    name:"waterDrink",imageSrc:"hood.jpg",price: `N${8800}.00`
+  },
+  {
+    name:"waterFish",imageSrc:"boot.jpg",price: `N${1000}.00`
+  }
+  
+]
+
+window.onload = () => {
+  let button = document.querySelector('.search-button');
+  
+  button.addEventListener('click',() => {
+    performSearch();
+  });
+  let input = document.querySelector('.search-input');
+  input.addEventListener('keyUp',(event)=> {
+    if(event.key === 'Enter'){
+      performSearch();
+    }
+    
+  });
+  
+  
+  function performSearch(){
+    const query = input.value.toLowerCase();
+    const result = fileResources.filter(item => 
+      item.name.toLowerCase().includes(query));
+      displayResult(result);
+  }
+  let array;
+  function displayResult(result){
+    if(result.length === 0){
+      iziToast.warning({
+        title:'Try again',
+        message:'No results found!',
+        timeOut:2000,
+      });
+    }else{
+      result.slice(0,3).forEach(item => {
+        let foundName = item.name;
+        let foundImage = item.imageSrc;
+        let foundPrice = item.price;
+        
+        let nestedItem = {
+          name:foundName,
+          imageSrc:foundImage,
+          price:foundPrice
+        };
+        
+        let searchResults = JSON.stringify(nestedItem);
+        localStorage.setItem('searchResults',searchResults);
+        window.location.href = "index2.html";
+        
+      });
+    }
+    
+  }
+  
+}
+  
+</script>
+</html>
