@@ -358,7 +358,8 @@ h1{
     }
 
     // Preload images and then redirect to the next page
-    preloadImages(imageUrls)
+    window.onload = (() => {
+        preloadImages(imageUrls)
       .then((urls) => {
         console.log('All images loaded:', urls);
         // Redirect to the next page
@@ -369,6 +370,8 @@ h1{
         // Handle error case here
         document.body.innerHTML = 'Failed to load some images. Please try again.' + url;
       });
+    });
+    
   </script>
 </body>
 </html>
