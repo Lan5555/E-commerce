@@ -367,7 +367,7 @@ h1{
       .catch((url) => {
         console.error('Image failed to load:', url);
         // Handle error case here
-        document.body.innerHTML = 'Failed to load some images. Please try again.';
+        document.body.innerHTML = 'Failed to load some images. Please try again.' + url;
       });
   </script>
 </body>
