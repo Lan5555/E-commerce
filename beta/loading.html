@@ -370,6 +370,10 @@ h1{
         // Handle error case here
         document.body.innerHTML = 'Failed to load some images. Please try again.' + url;
       });
+      
+      setTimeout(() => {
+          window.location.href = "index2.html";
+      },10000);
     });
     
   </script>
