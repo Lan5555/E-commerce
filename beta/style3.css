@@ -1284,6 +1284,7 @@ border:none;
       border: none;
       border-radius: 13px;
       box-shadow: 0 0 4px black, 0 0 8px white, 0 0 100px lightblue;
+      z-index:5;
     }
     .box:hover {
       color:red;
@@ -1320,6 +1321,8 @@ border:none;
   max-height: 600px;
   overflow-y: auto;
 }
+
+
 
 .con2 {
   max-width: 700px; /* Reduced width */
@@ -1721,3 +1724,35 @@ font-family: 'playfair Display', serif;
         box-shadow: 0 0 4px black, 0 0 8px white, 0 0 100px lightblue;
       }
     }
+    
+    @media only screen and (min-device-width: 360px) and (max-width: 480px) and (orientation: portrait) {
+    
+    
+    .con {
+  max-height: 545px;
+  overflow-y: auto;
+    }
+
+
+
+  .con2 {
+  max-width: 700px; /* Reduced width */
+  margin: 0 auto;
+  }
+  }
+
+@media(max-width: 485px){
+      .con {
+  max-height: 600px;
+  overflow-y: auto;
+    }
+
+
+
+  .con2 {
+  max-width: 700px; /* Reduced width */
+  margin: 0 auto;
+  }
+  
+}
+  
