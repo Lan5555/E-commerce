@@ -179,25 +179,25 @@ let fileResources1 = [
   },
   {
     name: "Shoe Airforce A",
-    imageSrc: "/realShoes/shoeairforce 1 A.JPG",
+    imageSrc: "realShoes/shoeairforce 1 A.JPG",
     price: `N${15000}.00 (unboxed), N${16000}.00 (boxed)`,
     description: "Brand: Nike Airforce, Size: 38-43"
   },
   {
     name: "Shoe Airforce 1B",
-    imageSrc: "/realShoes/shoe airforce 1 B.JPG",
+    imageSrc: "realShoes/shoe airforce 1 B.JPG",
     price: `N${13500}.00 (unboxed), N${15000}.00 (boxed)`,
     description: "Brand: Airforce 1, Size: 38-42"
   },
   {
     name: "Shoe Jordan A",
-    imageSrc: "/realShoes/shoejordanA.JPG",
+    imageSrc: "realShoes/shoejordanA.JPG",
     price: `N${15000}.00 (unboxed), N${16000}.00 (boxed)`,
     description: "Brand: Jordan, Size: 38-43"
   },
   {
     name: "Shoe Retro",
-    imageSrc: "/realShoes/shoeretro.jpg",
+    imageSrc: "realShoes/shoeretro.jpg",
     price: `N${15000}.00`,
     description: "Brand: Adidas Retro, Size: 43-46, (Unboxed)"
   },
@@ -221,49 +221,49 @@ let fileResources1 = [
  let fileResources2 = [
   {
     name: "Shoe Ogiy",
-    imageSrc: "/realShoes/shoeogiy.JPG",
+    imageSrc: "realShoes/shoeogiy.JPG",
     price: `N${17500}.00`,
     description: "Brand: Ogiy, Size: 40-45, (Fully boxed)"
   },
   {
     name: "Shoe Naked Wolfe",
-    imageSrc: "/realShoes/shoe nak wolfe.JPG",
+    imageSrc: "realShoes/shoe nak wolfe.JPG",
     price: `N${23000}.00`,
     description: "Brand: Naked Wolfe, Size: 38-42, (Unboxed)"
   },
   {
     name: "Slides Pinging Crocs",
-    imageSrc: "/slides/slidespcrocs.jpg",
+    imageSrc: "slides/slidespcrocs.jpg",
     price: `N${17000}.00`,
     description: "Brand: Pinging Crocs, Size: 49-46"
   },
   {
     name: "Shoe Adidas",
-    imageSrc: "/realShoes/shoeaddi.JPG",
+    imageSrc: "realShoes/shoeaddi.JPG",
     price: `N${20000}.00`,
     description: "Brand: Adidas, Size: 42-46, (Unboxed)"
   },
   {
     name: "Shoe Supreme Airforce",
-    imageSrc: "/realShoes/shoesup1.JPG",
+    imageSrc: "realShoes/shoesup1.JPG",
     price: `N${23000}.00`,
     description: "Brand: Supreme Airforce, Size: 38-45, (Unboxed)"
   },
   {
     name: "Shoe BL",
-    imageSrc: "/realShoes/shoebl.JPG",
+    imageSrc: "realShoes/shoebl.JPG",
     price: `N${13000}.00`,
     description: "New in, Size: 38-42, (Unboxed)"
   },
   {
     name: "Shoe Timberland Sneakers",
-    imageSrc: "/realShoes/shoetim.jpg",
+    imageSrc: "realShoes/shoetim.jpg",
     price: `N${21000}.00`,
     description: "Brand: Timberland Sneakers, Size: 40-46"
   },
   {
     name: "Shoe Clarks (Corporate Shoe)",
-    imageSrc: "/realShoes/shoecope.JPG",
+    imageSrc: "realShoes/shoecope.JPG",
     price: `N${44000}.00`,
     description: "Brand: Clarks (Corporate Shoe), Size: 40-46, (Fully boxed)"
   }
@@ -274,43 +274,43 @@ let fileResources1 = [
   let fileResources3 = [
   {
     name: "Shoe Givenchy",
-    imageSrc: "/realShoes/shoegiveA.JPG",
+    imageSrc: "realShoes/shoegiveA.JPG",
     price: `N${25000}.00`,
     description: "Brand: Givenchy, Size: 40-45"
   },
   {
     name: "Shoe Timberland Loafers",
-    imageSrc: "/realShoes/shoeloaf.jpg",
+    imageSrc: "realShoes/shoeloaf.jpg",
     price: `N${24000}.00`,
     description: "Brand: Timberland Loafers, Size: 40-46"
   },
   {
     name: "Shoe Wallabees (Suede)",
-    imageSrc: "/realShoes/shoesued.jpg",
+    imageSrc: "realShoes/shoesued.jpg",
     price: `N${18000}.00`,
     description: "Brand: Wallabees (Suede), Size: 40-46"
   },
   {
     name: "Shoe Wallabees (Navy Blue)",
-    imageSrc: "/realShoes/shoewall.jpg",
+    imageSrc: "realShoes/shoewall.jpg",
     price: `N${18000}.00`,
     description: "Brand: Wallabees (Navy Blue), Size: 40-46"
   },
   {
     name: "Shoe Football Boots",
-    imageSrc: "/realShoes/shoefoot.jpg",
+    imageSrc: "realShoes/shoefoot.jpg",
     price: `N${14000}.00`,
     description: "Football Boots, Size: 40-45"
   },
   {
     name: "Slides Celine (Carton Pam's)",
-    imageSrc: "/slides/slidesceli.JPG",
+    imageSrc: "slides/slidesceli.JPG",
     price: `N${25000}.00`,
     description: "Brand: Celine (Carton Pam's), Size: 40-45"
   },
   {
     name: "Slides Balman (Carton Pam's)",
-    imageSrc: "/slides/slidesbalman.JPG",
+    imageSrc: "slides/slidesbalman.JPG",
     price: `N${25000}.00`,
     description: "Brand: Balman (Carton Pam's), Size: 40-45"
   },
@@ -327,37 +327,37 @@ let fileResources1 = [
   let fileResources4 = [
   {
     name: "Slides Givenchy (Carton Pam's)",
-    imageSrc: "/slides/slidesgive.JPG",
+    imageSrc: "slides/slidesgive.JPG",
     price: `N${25000}.00`,
     description: "Brand: Givenchy (Carton Pam's), Size: 40-45"
   },
   {
     name: "Slides Stock Pam's",
-    imageSrc: "/slides/slidespams.jpg",
+    imageSrc: "slides/slidespams.jpg",
     price: `N${8000}.00`,
     description: "Stock Pam's, Size: 40-45"
   },
   {
     name: "Slides Crocs",
-    imageSrc: "/slides/slidescrocs.jpg",
+    imageSrc: "slides/slidescrocs.jpg",
     price: `N${15000}.00`,
     description: "Brand: Crocs, Size: 40-45 (6-11)"
   },
   {
     name: "Slides Literide Crocs",
-    imageSrc: "/slides/slidesride.jpg",
+    imageSrc: "slides/slidesride.jpg",
     price: `N${16500}.00`,
     description: "Brand: Literide Crocs, Size: 40-45 (6-11)"
   },
   {
     name: "Slides Tommy Hilfiger Slippers",
-    imageSrc: "/slides/slidestom.jpg",
+    imageSrc: "slides/slidestom.jpg",
     price: `N${5000}.00`,
     description: "Brand: Tommy Hilfiger Slippers, Size: 41-45"
   },
   {
     name: "Slide Nike Belt",
-    imageSrc: "/slides/slidesnike.jpg",
+    imageSrc: "slides/slidesnike.jpg",
     price: `N${7500}.00`,
     description: "Brand: Nike Belt, Size: 40-45"
   },
@@ -380,7 +380,7 @@ let fileResources1 = [
   let fileResources5 = [
   {
     name: "Match Fit Jean",
-    imageSrc: "/marchingFits/matchfitjean.JPG",
+    imageSrc: "marchingFits/matchfitjean.JPG",
     price: `N${32000}.00`,
     description: "Quality Jean Matching Fit (Short Troser)"
   },
@@ -392,37 +392,37 @@ let fileResources1 = [
   },
   {
     name: "Troser Jean",
-    imageSrc: "/realTrousers/troserjeans.jpg",
+    imageSrc: "realTrousers/troserjeans.jpg",
     price: `N${22000}.00`,
     description: "Premium Baggy Jeans"
   },
   {
     name: "Shirt Checker",
-    imageSrc: "/marchingFits/shirtcheck.JPG",
+    imageSrc: "marchingFits/shirtcheck.JPG",
     price: `N${10000}.00`,
     description: "Quality Checker Shirts"
   },
   {
     name: "Shirt Tees",
-    imageSrc: "/realShirt/shirttees.jpg",
+    imageSrc: "realShirt/shirttees.jpg",
     price: `N${17000}.00`,
     description: "Quality Top Notch Tees"
   },
   {
     name: "Shirt Hood",
-    imageSrc: "/realShirt/shirthoody.jpg",
+    imageSrc: "realShirt/shirthoody.jpg",
     price: `N${18000}.00`,
     description: "Quality Hoody"
   },
   {
     name: "Shoe Givenchy",
-    imageSrc: "/realShoes/shoevenchy.JPG",
+    imageSrc: "realShoes/shoevenchy.JPG",
     price: `N${36000}.00`,
     description: "Brand: Givenchy, Size: 40-46"
   },
   {
     name: "Match Fit Short",
-    imageSrc: "/marchingFits/matchpfitshor.JPG",
+    imageSrc: "marchingFits/matchpfitshor.JPG",
     price: `N${25000}.00`,
     description: "Brand: Balenciaga, Quality Matching Fit"
   }
@@ -433,49 +433,49 @@ let fileResources1 = [
   let fileResources6 = [
   {
     name: "Shirt Hoody",
-    imageSrc: "/realShirt/shirthoody.jpg",
+    imageSrc: "realShirt/shirthoody.jpg",
     price: `N${18000}.00`,
     description: "Premium Hoody"
   },
   {
     name: "Shoe x Sor",
-    imageSrc: "/realShoes/shoedor.JPG",
+    imageSrc: "realShoes/shoedor.JPG",
     price: `N${18000}.00`,
     description: "Quality Shoe x Sor, (Unboxed)"
   },
   {
     name: "Shoe Dr. Martin's",
-    imageSrc: "/realShoes/shoeDrmart.JPG",
+    imageSrc: "realShoes/shoeDrmart.JPG",
     price: `N${45000}.00`,
     description: "Brand: Dr. Martin's, Size: 40-46"
   },
   {
     name: "Shoe Louis Vuitton Bigsole",
-    imageSrc: "/realShoes/shoelv.JPG",
+    imageSrc: "realShoes/shoelv.JPG",
     price: `N${35000}.00`,
     description: "Brand: Louis Vuitton Bigsole, Size: 40-46"
   },
   {
     name: "Shoe Nike",
-    imageSrc: "/realShoes/shoenike.JPG",
+    imageSrc: "realShoes/shoenike.JPG",
     price: `N${9000}.00`,
     description: "Brand: Nike, Size: 41-46"
   },
   {
     name: "Shirt Tees",
-    imageSrc: "/realShirt/shirtte.jpg",
+    imageSrc: "realShirt/shirtte.jpg",
     price: `N${12000}.00`,
     description: "Quality Round Neck Tees"
   },
   {
     name: "Shirt Jean Jacket",
-    imageSrc: "/realShirt/shirtjac.jpg",
+    imageSrc: "realShirt/shirtjac.jpg",
     price: `N${22000}.00`,
     description: "Quality Jean Jacket"
   },
   {
     name: "Troser Shorts",
-    imageSrc: "/realTrousers/trosershorts.jpg",
+    imageSrc: "realTrousers/trosershorts.jpg",
     price: `N${12000}.00`,
     description: "Quality Shorts"
   }
@@ -487,49 +487,49 @@ let fileResources1 = [
   let fileResources7 = [
   {
     name: "Shoe Timberland",
-    imageSrc: "/realShoes/shoetimber.JPG",
+    imageSrc: "realShoes/shoetimber.JPG",
     price: `N${48000}.00`,
     description: "Brand: Timberland, Grade A Timberland Boots, Size: 40-45"
   },
   {
     name: "Shoe Nike SB",
-    imageSrc: "/realShoes/shoenikeB.JPG",
+    imageSrc: "realShoes/shoenikeB.JPG",
     price: `N${24000}.00`,
     description: "Brand: Nike SB, Size: 40-45"
   },
   {
     name: "Shoe Adidas Gazelle",
-    imageSrc: "/realShoes/shoegaze.JPG",
+    imageSrc: "realShoes/shoegaze.JPG",
     price: `N${22000}.00`,
     description: "Brand: Adidas Gazelle, Size: 40-47, (Boxed)"
   },
   {
     name: "Shoe Jordan 4",
-    imageSrc: "/realShoes/shoedan4.JPG",
+    imageSrc: "realShoes/shoedan4.JPG",
     price: `N${24000}.00`,
     description: "Brand: Jordan 4, Size: 40-46, (Boxed)"
   },
   {
     name: "Shoe Reebok",
-    imageSrc: "/realShoes/shoeree.JPG",
+    imageSrc: "realShoes/shoeree.JPG",
     price: `N${17000}.00`,
     description: "Brand: Reebok, Size: 42-46"
   },
   {
     name: "Shoe NY",
-    imageSrc: "/realShoes/shoeny.JPG",
+    imageSrc: "realShoes/shoeny.JPG",
     price: `N${23000}.00`,
     description: "Brand: NY, Size: 40-45, (Unboxed)"
   },
   {
     name: "Shoe Nike Zoom",
-    imageSrc: "/realShoes/shoezoom.JPG",
+    imageSrc: "realShoes/shoezoom.JPG",
     price: `N${18000}.00`,
     description: "Brand: Nike Zoom, Size: 40-45"
   },
   {
     name: "Shoe Airforce 1",
-    imageSrc: "/realShoes/shoeforce.JPG",
+    imageSrc: "realShoes/shoeforce.JPG",
     price: `N${18000}.00`,
     description: "Brand: Airforce 1, Size: 41-47"
   }
@@ -541,49 +541,49 @@ let fileResources1 = [
   let fileResources8 = [
   {
     name: "Shoe Fashion Kicks",
-    imageSrc: "/realShoes/shoekicks.JPG",
+    imageSrc: "realShoes/shoekicks.JPG",
     price: `N${22000}.00`,
     description: "Fashion Kicks, Size: 40-45, (Fully boxed)"
   },
   {
     name: "Shoe Fendi Roma Big Sole",
-    imageSrc: "/realShoes/shoefendi.JPG",
+    imageSrc: "realShoes/shoefendi.JPG",
     price: `N${37000}.00`,
     description: "Brand: Fendi Roma Big Sole, Size: 40-45"
   },
   {
     name: "Shoe Balenciaga Sandals",
-    imageSrc: "/realShoes/shoebala.jpg",
+    imageSrc: "realShoes/shoebala.jpg",
     price: `N${63000}.00`,
     description: "Brand: Balenciaga Sandals, Size: 40-45, (Fully boxed)"
   },
   {
     name: "Shoe Jordan High Dunk",
-    imageSrc: "/realShoes/shoedunk.jpg",
+    imageSrc: "realShoes/shoedunk.jpg",
     price: `N${15000}.00`,
     description: "Brand: Jordan High Dunk, Size: 38-42"
   },
   {
     name: "Shirt Balenciaga",
-    imageSrc: "/realShirt/shirtciaga2.jpg",
+    imageSrc: "realShirt/shirtciaga2.jpg",
     price: `N${19000}.00`,
     description: "Balenciaga Shirt"
   },
   {
     name: "Troser Premium Baggy Jeans",
-    imageSrc: "/realTrousers/troserpre.jpg",
+    imageSrc: "realTrousers/troserpre.jpg",
     price: `N${25000}.00`,
     description: "Premium Baggy Jeans, Quality or Nothing 🔥"
   },
   {
     name: "Shirt Quality",
-    imageSrc: "/realShirt/shirtess.jpg",
+    imageSrc: "realShirt/shirtess.jpg",
     price: `N${18000}.00`,
     description: "Quality Shirts"
   },
   {
     name: "Shirt Sweater Vest",
-    imageSrc: "/realShirt/shirtves.jpg",
+    imageSrc: "realShirt/shirtves.jpg",
     price: `N${21000}.00`,
     description: "Quality Sweater Vest"
   }
@@ -1059,56 +1059,52 @@ let changer3 = fileResources1[5];
 
 
 
-let list2 = ["/realShoes/shoecope1.JPG","/realShoes/shoecope2.JPG","/realShoes/shoecope3.JPG","/realShoes/shoecope.JPG"]
+let list2 = ["realShoes/shoecope1.JPG", "realShoes/shoecope2.JPG", "realShoes/shoecope3.JPG", "realShoes/shoecope.JPG"];
 
-let list3 = ["/realShoes/shoetimber1.JPG","/realShoes/shoetimber2.JPG","/realShoes/shoetimber3.JPG","/realShoes/shoetimber.JPG"]
-let list4 = ["/realShoes/shoewall1.jpg","/realShoes/shoewall2.jpg","/realShoes/shoewall.jpg"]
-let list5 = ["/realShoes/shoezoom1.JPG","/realShoes/shoezoom2.JPG","/realShoes/shoezoom.JPG"]
-let list6 = ["/realShoes/shoevenchy1.JPG","/realShoes/shoevenchy.JPG"]
-let list7 = ["/realShoes/shoesued1.jpg","/realShoes/shoesued.jpg"]
-let list8 = ["/realShoes/shoeretro2.jpg","/realShoes/shoeretro.jpg","/realShoes/shoeretro.jpg"]
-let list9 = ["/realShoes/shoeree2.JPG","/realShoes/shoeree1.JPG","/realShoes/shoeree.JPG"]
-let list10 = ["/realShoes/shoeogiy3.jpg","/realShoes/shoeogiy2.jpg","/realShoes/shoeogiy1.jpg","/realShoes/shoeogiy.jpg"]
-let list11 = ["/realShoes/shoenikeB2.JPG","/realShoes/shoenikeB1.JPG","/realShoes/shoenikeB.JPG"]
-let list12 = ["/realShoes/shoelv5.JPG","/realShoes/shoelv4.JPG","/realShoes/shoelv3.JPG","/realShoes/shoelv.JPG"];
-let list13 = ["/realShoes/shoeloaf2.jpg","/realShoes/shoeloaf1.jpg","/realShoes/shoeloaf.jpg"]
-let list14 = ["/realShoes/shoekicks2.JPG","/realShoes/shoekicks1.JPG","/realShoes/shoekicks.JPG"]
-let list15 = ["/realShoes/shoegaze1.JPG","/realShoes/shoegaze.JPG"]
-let list16 = ["/realShoes/shoeforce1.png","/realShoes/shoeforce.JPG"]
-let list17 = ["/realShoes/shoefoot6.jpg","/realShoes/shoefoot5.jpg","/realShoes/shoefoot4.jpg","/realShoes/shoefoot.jpg"]
-let list18 = ["/realShoes/shoedunk3.JPG","/realShoes/shoedunk 1.jpg","/realShoes/shoedunk.jpg"]
-let list19 = ["/realShoes/shoeDrmart1.JPG","/realShoes/shoeDrmart.JPG"];
-let list20 = ["/realShoes/shoecope4.JPG","/realShoes/shoecope3.JPG","/realShoes/shoecope2.JPG","/realShoes/shoecope1.JPG","/realShoes/shoecope.JPG"];
-let list21 = ["/realShoes/shoebala2.jpg","/realShoes/shoebala1.jpg","/realShoes/shoebala.jpg"];
-let list22 = ["/realShoes/shoeaddi2.JPG","/realShoes/shoeaddi1.JPG","/realShoes/shoeaddi.JPG"];
-let list23 = ["/realShoes/shoeA.JPG","/realShoes/shoeA1.JPG"];
-let list244 = ["/realShoes/shoe nak wolfe 1.JPG","/realShoes/shoe nak wolfe.JPG"];
-
+let list3 = ["realShoes/shoetimber1.JPG", "realShoes/shoetimber2.JPG", "realShoes/shoetimber3.JPG", "realShoes/shoetimber.JPG"];
+let list4 = ["realShoes/shoewall1.jpg", "realShoes/shoewall2.jpg", "realShoes/shoewall.jpg"];
+let list5 = ["realShoes/shoezoom1.JPG", "realShoes/shoezoom2.JPG", "realShoes/shoezoom.JPG"];
+let list6 = ["realShoes/shoevenchy1.JPG", "realShoes/shoevenchy.JPG"];
+let list7 = ["realShoes/shoesued1.jpg", "realShoes/shoesued.jpg"];
+let list8 = ["realShoes/shoeretro2.jpg", "realShoes/shoeretro.jpg", "realShoes/shoeretro.jpg"];
+let list9 = ["realShoes/shoeree2.JPG", "realShoes/shoeree1.JPG", "realShoes/shoeree.JPG"];
+let list10 = ["realShoes/shoeogiy3.jpg", "realShoes/shoeogiy2.jpg", "realShoes/shoeogiy1.jpg", "realShoes/shoeogiy.jpg"];
+let list11 = ["realShoes/shoenikeB2.JPG", "realShoes/shoenikeB1.JPG", "realShoes/shoenikeB.JPG"];
+let list12 = ["realShoes/shoelv5.JPG", "realShoes/shoelv4.JPG", "realShoes/shoelv3.JPG", "realShoes/shoelv.JPG"];
+let list13 = ["realShoes/shoeloaf2.jpg", "realShoes/shoeloaf1.jpg", "realShoes/shoeloaf.jpg"];
+let list14 = ["realShoes/shoekicks2.JPG", "realShoes/shoekicks1.JPG", "realShoes/shoekicks.JPG"];
+let list15 = ["realShoes/shoegaze1.JPG", "realShoes/shoegaze.JPG"];
+let list16 = ["realShoes/shoeforce1.png", "realShoes/shoeforce.JPG"];
+let list17 = ["realShoes/shoefoot6.jpg", "realShoes/shoefoot5.jpg", "realShoes/shoefoot4.jpg", "realShoes/shoefoot.jpg"];
+let list18 = ["realShoes/shoedunk3.JPG", "realShoes/shoedunk 1.jpg", "realShoes/shoedunk.jpg"];
+let list19 = ["realShoes/shoeDrmart1.JPG", "realShoes/shoeDrmart.JPG"];
+let list20 = ["realShoes/shoecope4.JPG", "realShoes/shoecope3.JPG", "realShoes/shoecope2.JPG", "realShoes/shoecope1.JPG", "realShoes/shoecope.JPG"];
+let list21 = ["realShoes/shoebala2.jpg", "realShoes/shoebala1.jpg", "realShoes/shoebala.jpg"];
+let list22 = ["realShoes/shoeaddi2.JPG", "realShoes/shoeaddi1.JPG", "realShoes/shoeaddi.JPG"];
+let list23 = ["realShoes/shoeA.JPG", "realShoes/shoeA1.JPG"];
+let list244 = ["realShoes/shoe nak wolfe 1.JPG", "realShoes/shoe nak wolfe.JPG"];
 //shirts
-let list24 = ["/realShirt/shirthoody10.jpg","/realShirt/shirthoody4.jpg","/realShirt/shirthoody7.jpg","/realShirt/shirthoody6.jpg"];
-let list25 = ["/realShirt/shirtte11.jpg","/realShirt/shirtte10.jpg","/realShirt/shirtte9.jpg","/realShirt/shirtte.jpg"];
-let list26 = ["/realShirt/shirttees8.jpg","/realShirt/shirttees7.jpg","/realShirt/shirttees6.jpg","/realShirt/shirttees.jpg"]
-let list27 = ["/realShirt/shirtves6.jpg","/realShirt/shirtves5.jpg","/realShirt/shirtves4.jpg","/realShirt/shirtves.jpg"]
-let list28 = ["/realShirt/shirtjac3.jpg","/realShirt/shirtjac2.jpg","/realShirt/shirtjac1.jpg","/realShirt/shirtjac.jpg"];
+let list24 = ["realShirt/shirthoody10.jpg", "realShirt/shirthoody4.jpg", "realShirt/shirthoody7.jpg", "realShirt/shirthoody6.jpg"];
+let list25 = ["realShirt/shirtte11.jpg", "realShirt/shirtte10.jpg", "realShirt/shirtte9.jpg", "realShirt/shirtte.jpg"];
+let list26 = ["realShirt/shirttees8.jpg", "realShirt/shirttees7.jpg", "realShirt/shirttees6.jpg", "realShirt/shirttees.jpg"];
+let list27 = ["realShirt/shirtves6.jpg", "realShirt/shirtves5.jpg", "realShirt/shirtves4.jpg", "realShirt/shirtves.jpg"];
+let list28 = ["realShirt/shirtjac3.jpg", "realShirt/shirtjac2.jpg", "realShirt/shirtjac1.jpg", "realShirt/shirtjac.jpg"];
 
-let list29 = ["/realShirt/shirtess4.jpg","/realShirt/shirtess3.jpg","/realShirt/shirtess2.jpg","/realShirt/shirtess.jpg"]
-let list30 = ["/realShirt/shirtciaga2.jpg","/realShirt/shirtciaga1.jpg","/realShirt/shirtciaga.jpg"]
-
+let list29 = ["realShirt/shirtess4.jpg", "realShirt/shirtess3.jpg", "realShirt/shirtess2.jpg", "realShirt/shirtess.jpg"];
+let list30 = ["realShirt/shirtciaga2.jpg", "realShirt/shirtciaga1.jpg", "realShirt/shirtciaga.jpg"];
 //trousers
-let list31 = ["/realTrousers/trosershorts4.jpg","/realTrousers/trosershorts3.jpg","/realTrousers/trosershorts2.jpg","/realTrousers/trosershorts1.jpg"];
-let list32 = ["/realTrousers/troserpre6.jpg","/realTrousers/troserpre5.jpg","/realTrousers/troserpre4.jpg","/realTrousers/troserpre.jpg"];
-let list33 = ["/realTrousers/troserjeans9.jpg","/realTrousers/troserjeans8.jpg","/realTrousers/troserjeans7.jpg","/realTrousers/troserjeans.jpg"];
-let list34 = ["/marchingFits/matchfitshorA7.JPG","/marchingFits/matchfitshorA6.JPG","/marchingFits/matchfitshorA5.JPG","/marchingFits/matchfitshorA4.JPG"];
-let list35 = ["/marchingFits/matchfitshor5.JPG","/marchingFits/matchfitshor4.JPG","/marchingFits/matchfitshor3.JPG","/marchingFits/matchfitshor.JPG"]
-
+let list31 = ["realTrousers/trosershorts4.jpg", "realTrousers/trosershorts3.jpg", "realTrousers/trosershorts2.jpg", "realTrousers/trosershorts1.jpg"];
+let list32 = ["realTrousers/troserpre6.jpg", "realTrousers/troserpre5.jpg", "realTrousers/troserpre4.jpg", "realTrousers/troserpre.jpg"];
+let list33 = ["realTrousers/troserjeans9.jpg", "realTrousers/troserjeans8.jpg", "realTrousers/troserjeans7.jpg", "realTrousers/troserjeans.jpg"];
+let list34 = ["marchingFits/matchfitshorA7.JPG", "marchingFits/matchfitshorA6.JPG", "marchingFits/matchfitshorA5.JPG", "marchingFits/matchfitshorA4.JPG"];
+let list35 = ["marchingFits/matchfitshor5.JPG", "marchingFits/matchfitshor4.JPG", "marchingFits/matchfitshor3.JPG", "marchingFits/matchfitshor.JPG"];
 //slides
-let list36 = ["/slides/slidescrocs2.jpg","/slides/slidescrocs1.jpg","/slides/slidescrocs.jpg"]
-let list37 = ["/slides/slidesnike3.jpg","/slides/slidesnike2.jpg","/slides/slidesnike.jpg"]
-let list38 = ["/slides/slidespams8.jpg","/slides/slidespams7.jpg","/slides/slidespams6.jpg","/slides/slidespams.jpg"]
-let list39 = ["/slides/slidespcrocs3.jpg","/slides/slidespcrocs2.jpg","/slides/slidespcrocs1.jpg","/slides/slidespcrocs.jpg"]
-let list40 = ["/slides/slidesride2.jpg","/slides/slidesride1.jpg","/slides/slidesride.jpg"]
-let list41 = ["/slides/slidestom3.jpg","/slides/slidestom2.jpg","/slides/slidestom1.jpg","/slides/slidestom.jpg"]
-
+let list36 = ["slides/slidescrocs2.jpg", "slides/slidescrocs1.jpg", "slides/slidescrocs.jpg"];
+let list37 = ["slides/slidesnike3.jpg", "slides/slidesnike2.jpg", "slides/slidesnike.jpg"];
+let list38 = ["slides/slidespams8.jpg", "slides/slidespams7.jpg", "slides/slidespams6.jpg", "slides/slidespams.jpg"];
+let list39 = ["slides/slidespcrocs3.jpg", "slides/slidespcrocs2.jpg", "slides/slidespcrocs1.jpg", "slides/slidespcrocs.jpg"];
+let list40 = ["slides/slidesride2.jpg", "slides/slidesride1.jpg", "slides/slidesride.jpg"];
+let list41 = ["slides/slidestom3.jpg", "slides/slidestom2.jpg", "slides/slidestom1.jpg", "slides/slidestom.jpg"];
 
 
 function swapImageSource(){
