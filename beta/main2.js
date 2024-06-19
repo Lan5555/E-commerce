@@ -1270,21 +1270,21 @@ function swapImageSource5() {
       case 1:
         img2.src = list33[0]
         img4.src = list26[0]
-        //img5.src = list24[0]
+        img5.src = list24[0]
         img6.src = list6[0]
         img7.src = list34[0]
         break;
       case 2:
         img2.src = list33[1]
         img4.src = list26[1]
-      //  img5.src = list24[1]
+        img5.src = list24[1]
         img6.src = list6[1]
         img7.src = list34[1]
         break;
       case 3:
           img2.src = list33[2]
           img4.src = list26[2]
-      //    img5.src = list24[2]
+          img5.src = list24[2]
           img7.src = list34[2]
         
         break;
@@ -1292,7 +1292,7 @@ function swapImageSource5() {
         
           img2.src = list33[3]
           img4.src = list26[3]
-        //  img5.src = list24[3]
+        img5.src = list24[3]
           img7.src = list34[3]
         
         index = 0;
@@ -1309,7 +1309,7 @@ function swapImageSource7() {
     index++;
      switch(index){
        case 1:
-         img0.src = list24[0]
+        // img0.src = list24[0]
          img3.src = list12[0]
          img4.src = list11[0]
          img5.src = list25[0]
@@ -1317,7 +1317,7 @@ function swapImageSource7() {
          img7.src = list31[0]
          break;
        case 2:
-          img0.src = list24[1]
+          //img0.src = list24[1]
             img3.src = list12[1]
             img4.src = list11[1]
             img5.src = list25[1]
@@ -1325,7 +1325,7 @@ function swapImageSource7() {
             img7.src = list31[1]
          break;
         case 3:
-          img0.src = list24[2]
+         // img0.src = list24[2]
             img3.src = list12[2]
             img4.src = list11[2]
             img5.src = list25[2]
@@ -1334,7 +1334,7 @@ function swapImageSource7() {
           
           break;
         case 4:
-          img0.src = list24[3]
+          //img0.src = list24[3]
             img3.src = list12[3]
             img5.src = list25[3]
             img6.src = list28[3]
@@ -2308,4 +2308,4 @@ localStorage.setItem('imageTracker',track7);
 })
 details8.addEventListener('click', () => {
 localStorage.setItem('imageTracker',track8);
-})
+})document.getElementById
