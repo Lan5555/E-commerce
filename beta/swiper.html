@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slider</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <style>
+    
+       /* Basic styles */
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: black;
+        }
+
+        .swiper-container {
+            width: 80%;
+            height: 800px; /* Adjust the height for desktop */
+            background: #fff;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .swiper-slide {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+            color: #fff;
+        }
+
+        .swiper-slide img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .swiper-button-next,
+        .swiper-button-prev {
+            color: #000;
+        }
+
+        .swiper-pagination-bullet {
+            background: #000;
+        }
+    @media only screen and (max-width:600px){
+        /* Add some basic styles */
+        .swiper-container {
+            width: 100%;
+            height: 400px;
+            display: flex;
+            position:fixed;
+            top:20%;
+            left:2%;
+        }
+        
+        .swiper-slide {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .swiper-slide img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: cover;
+        }
+    }
+    </style>
+</head>
+<body>
+
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide"><img id = "first" src="" alt="Image 1"></div>
+        <div class="swiper-slide"><img id = "second" src="" alt="Image 2"></div>
+        <div class="swiper-slide"><img id = "third" src="" alt="Image 3"></div>
+        <div class="swiper-slide"><img id = "fourth" src="" alt="Image 4"></div>
+        
+        <!-- Add more slides as needed -->
+    </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+    <!-- Add Navigation -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+</div>
+
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script>
+
+window.onload = function(){
+    var swiper = new Swiper('.swiper-container', {
+        loop: true,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
+    
+    
+ let list2 = ["realShoes/shoecope1.JPG", "realShoes/shoecope2.JPG", "realShoes/shoecope3.JPG", "realShoes/shoecope.JPG"];
+
+let list3 = ["realShoes/shoetimber1.JPG", "realShoes/shoetimber2.JPG", "realShoes/shoetimber3.JPG", "realShoes/shoetimber.JPG"];
+let list4 = ["realShoes/shoewall1.jpg", "realShoes/shoewall2.jpg", "realShoes/shoewall.jpg"];
+let list5 = ["realShoes/shoezoom1.JPG", "realShoes/shoezoom2.JPG", "realShoes/shoezoom.JPG"];
+let list6 = ["realShoes/shoevenchy1.JPG", "realShoes/shoevenchy.JPG"];
+let list7 = ["realShoes/shoesued1.jpg", "realShoes/shoesued.jpg"];
+let list8 = ["realShoes/shoeretro2.jpg", "realShoes/shoeretro.jpg", "realShoes/shoeretro.jpg"];
+let list9 = ["realShoes/shoeree2.JPG", "realShoes/shoeree1.JPG", "realShoes/shoeree.JPG"];
+let list10 = ["realShoes/shoeogiy3.jpg", "realShoes/shoeogiy2.jpg", "realShoes/shoeogiy1.JPG", "realShoes/shoeogiy.JPG"];
+let list11 = ["realShoes/shoenikeB2.JPG", "realShoes/shoenikeB1.JPG", "realShoes/shoenikeB.JPG"];
+let list12 = ["realShoes/shoelv5.JPG", "realShoes/shoelv4.JPG", "realShoes/shoelv3.JPG", "realShoes/shoelv.JPG"];
+let list13 = ["realShoes/shoeloaf2.jpg", "realShoes/shoeloaf1.jpg", "realShoes/shoeloaf.jpg"];
+let list14 = ["realShoes/shoekicks2.JPG", "realShoes/shoekicks1.JPG", "realShoes/shoekicks.JPG"];
+let list15 = ["realShoes/shoegaze1.JPG", "realShoes/shoegaze.JPG"];
+let list16 = ["realShoes/shoeforce1.png", "realShoes/shoeforce.JPG"];
+let list17 = ["realShoes/shoefoot6.jpg", "realShoes/shoefoot5.jpg", "realShoes/shoefoot4.jpg", "realShoes/shoefoot.jpg"];
+let list18 = ["realShoes/shoedunk3.JPG", "realShoes/shoedunk 1.jpg", "realShoes/shoedunk.jpg"];
+let list19 = ["realShoes/shoeDrmart1.JPG", "realShoes/shoeDrmart.JPG"];
+let list20 = ["realShoes/shoecope4.JPG", "realShoes/shoecope3.JPG", "realShoes/shoecope2.JPG", "realShoes/shoecope1.JPG", "realShoes/shoecope.JPG"];
+let list21 = ["realShoes/shoebala2.jpg", "realShoes/shoebala1.jpg", "realShoes/shoebala.jpg"];
+let list22 = ["realShoes/shoeaddi2.JPG", "realShoes/shoeaddi1.JPG", "realShoes/shoeaddi.JPG"];
+let list23 = ["realShoes/shoeA.JPG", "realShoes/shoeA1.JPG"];
+let list244 = ["realShoes/shoe nak wolfe 1.JPG", "realShoes/shoe nak wolfe.JPG"];
+//shirts
+let list24 = ["realShirt/shirthoody10.jpg", "realShirt/shirthoody4.jpg", "realShirt/shirthoody7.jpg", "realShirt/shirthoody6.jpg"];
+let list25 = ["realShirt/shirtte11.jpg", "realShirt/shirtte10.jpg", "realShirt/shirtte9.jpg", "realShirt/shirtte.jpg"];
+let list26 = ["realShirt/shirttees8.jpg", "realShirt/shirttees7.jpg", "realShirt/shirttees6.jpg", "realShirt/shirttees.jpg"];
+let list27 = ["realShirt/shirtves6.jpg", "realShirt/shirtves1.jpg", "realShirt/shirtves4.jpg", "realShirt/shirtves.jpg"];
+let list28 = ["realShirt/shirtjac3.jpg", "realShirt/shirtjac2.jpg", "realShirt/shirtjac1.jpg", "realShirt/shirtjac.jpg"];
+
+let list29 = ["realShirt/shirtess4.jpg", "realShirt/shirtess3.jpg", "realShirt/shirtess2.jpg", "realShirt/shirtess.jpg"];
+let list30 = ["realShirt/shirtciaga2.jpg", "realShirt/shirtciaga1.jpg", "realShirt/shirtciaga.jpg"];
+//trousers
+let list31 = ["realTrousers/trosershorts4.jpg", "realTrousers/trosershort3.jpg", "realTrousers/trosershorts2.jpg", "realTrousers/trosershorts1.jpg"];
+let list32 = ["realTrousers/troserpre6.jpg", "realTrousers/troserpre5.jpg", "realTrousers/troserpre4.jpg", "realTrousers/troserpre.jpg"];
+let list33 = ["realTrousers/troserjeans9.jpg", "realTrousers/troserjeans8.jpg", "realTrousers/troserjeans7.jpg", "realTrousers/troserjeans.jpg"];
+let list34 = ["marchingFits/matchfitshorA7.JPG", "marchingFits/matchfitshorA6.JPG", "marchingFits/matchfitshorA5.JPG", "marchingFits/matchfitshorA4.JPG"];
+let list35 = ["marchingFits/matchfitshor5.JPG", "marchingFits/matchfitshor4.JPG", "marchingFits/matchfitshor3.JPG", "marchingFits/matchfitshor.JPG"];
+//slides
+let list36 = ["slides/slidescrocs2.jpg", "slides/slidescrocs1.jpg", "slides/slidescrocs.jpg"];
+let list37 = ["slides/slidesnike3.jpg", "slides/slidesnike2.jpg", "slides/slidesnike.jpg"];
+let list38 = ["slides/slidespams8.jpg", "slides/slidespams7.jpg", "slides/slidespams6.jpg", "slides/slidespams.jpg"];
+let list39 = ["slides/slidespcrocs3.jpg", "slides/slidespcrocs2.jpg", "slides/slidespcrocs1.jpg", "slides/slidespcrocs.jpg"];
+let list40 = ["slides/slidesride2.jpg", "slides/slidesride1.jpg", "slides/slidesride.jpg"];
+let list41 = ["slides/slidestom3.jpg", "slides/slidestom2.jpg", "slides/slidestom1.jpg", "slides/slidestom.jpg"];
+
+    
+    
+    
+    
+    let first = document.getElementById('first');
+    let second = document.getElementById('second');
+    let third = document.getElementById('third');
+    
+    if(localStorage.getItem('currentPage') == 0){
+      let replace = localStorage.getItem('imageTracker');
+      //shoe vans
+       if(replace == "1"){
+      first.src = ""
+      second.src = ""
+      third.src = ""
+      fourth.src = ""
+      }else if (replace == "2") {
+        //shoejack
+        first.src = ""
+        second.src = ""
+        third.src = ""
+        fourth.src = ""
+      }else if (replace == "3") {
+        //shoeairforce 1
+        first.src = ""
+        second.src = ""
+        third.src = ""
+        fourth.src = ""
+      }else if (replace == "4") {
+        //shoeairfore 2
+        first.src = ""
+        second.src = ""
+        third.src = ""
+        fourth.src = ""
+      }else if (replace == "5") {
+        //shoejordanA
+        first.src = ""
+        second.src = ""
+        third.src = ""
+        fourth.src = ""
+      }else if (replace == "6") {
+        //shoeretro
+        first.src = list8[0];
+        second.src = list8[1];
+        third.src = list8[2];
+        fourth.src = "";
+      }else if (replace == "7") {
+        //shoenewbal
+        first.src = ""
+        second.src = ""
+        third.src = ""
+        fourth.src = ""
+      }else if (replace == "8") {
+        //shoejor
+        first.src = ""
+        second.src = ""
+        third.src = ""
+        fourth.src = ""
+      }
+    }else if (localStorage.getItem('currentPage') == 1) {
+      let replace1 = localStorage.getItem('imageTracker');
+    
+        //shoeogiy
+      if (replace1 == "1") {
+        first.src = list10[0];
+        second.src = list10[1];
+        third.src = list10[2];
+        fourth.src = list10[3];
+      } else if (replace1 == "2") {
+        //shoe nak wolfe
+        first.src = list244[0];
+        second.src = list244[1];
+        third.src = "";
+        fourth.src = "";
+      } else if (replace1 == "3") {
+        //slidespcrocs
+        first.src = list39[0];
+        second.src = list39[1];
+        third.src = list39[2];
+        fourth.src = list39[3];
+      } else if (replace1 == "4") {
+        //shoeaddi
+        first.src = list22[0];
+        second.src = list22[1];
+        third.src = list22[2];
+        fourth.src = "";
+      } else if (replace1 == "5") {
+        //shoesup1
+        first.src = ""
+        second.src = ""
+        third.src = ""
+        fourth.src = ""
+      } else if (replace1 == "6") {
+        //shoebl
+        first.src = ""
+        second.src = ""
+        third.src = ""
+        fourth.src = ""
+    
+      } else if (replace1 == "7") {
+        //shoetim
+        first.src = ""
+        second.src = ""
+        third.src = ""
+        fourth.src = ""
+    
+      } else if (replace1 == "8") {
+        //shoecope
+        first.src = list2[0];
+        second.src = list2[1];
+        third.src = list2[2];
+        fourth.src = list2[3];
+    
+      }
+    }else if (localStorage.getItem('currentPage') == 2) {
+      let replace2 = localStorage.getItem('imageTracker');
+    
+      if (replace2 == "1") {
+        //shoegiveA
+        first.src = ""
+        second.src = ""
+        third.src = ""
+        fourth.src = ""
+    
+      } else if (replace2 == "2") {
+        //shoeloaf
+        first.src = list13[0];
+        second.src = list13[1];
+        third.src = list13[2];
+        fourth.src = "";
+    
+      } else if (replace2 == "3") {
+        //shoesued
+        first.src = list7[0];
+        second.src = list7[1];
+        third.src = "";
+        fourth.src ="";
+    
+      } else if (replace2 == "4") {
+        //shoewall
+        first.src = list4[0];
+        second.src = list4[1];
+        third.src = list4[2];
+        fourth.src = "";
+    
+      } else if (replace2 == "5") {
+        //shoefoot
+        first.src = list17[0];
+        second.src = list17[1];
+        third.src = list17[2];
+        fourth.src = list17[3];
+    
+      } else if (replace2 == "6") {
+        //slidesceli
+        first.src = ""
+        second.src = ""
+        third.src = ""
+        fourth.src = ""
+    
+      } else if (replace2 == "7") {
+        //slidesbalman
+        first.src = ""
+        second.src = ""
+        third.src = ""
+        fourth.src = ""
+    
+      } else if (replace2 == "8") {
+        //slidesesse
+        first.src = ""
+        second.src = ""
+        third.src = ""
+        fourth.src = ""
+    
+      }
+    }else if (localStorage.getItem('currentPage') == 3) {
+      let replace3 = localStorage.getItem('imageTracker');
+    
+      if (replace3 == "1") {
+        //slidesgive
+        first.src = ""
+        second.src = ""
+        third.src = ""
+        fourth.src = ""
+    
+      } else if (replace3 == "2") {
+        //slidespams
+        first.src = list38[0];
+        second.src = list38[1];
+        third.src = list38[2];
+        fourth.src = list38[3];
+    
+      } else if (replace3 == "3") {
+        //slidescrocs
+        first.src = list36[0];
+        second.src = list36[1];
+        third.src = list36[2];
+        fourth.src = "";
+    
+      } else if (replace3 == "4") {
+        //slidesride
+        first.src = list40[0];
+        second.src = list40[1];
+        third.src = list40[2];
+        fourth.src = "";
+    
+      } else if (replace3 == "5") {
+        //slidestom
+        first.src = list41[0];
+        second.src = list41[1];
+        third.src = list41[2];
+        fourth.src = list41[3];
+    
+      } else if (replace3 == "6") {
+        //slidesnike
+        first.src = list37[0];
+        second.src = list37[1];
+        third.src = list37[2];
+        fourth.src = "";
+    
+      } else if (replace3 == "7") {
+        //Jeanshor
+        first.src = ""
+        second.src = ""
+        third.src = ""
+        fourth.src = ""
+    
+      } else if (replace3 == "8") {
+        //shirtjeanjac
+        first.src = ""
+        second.src = ""
+        third.src = ""
+        fourth.src = ""
+    
+      }
+    }else if (localStorage.getItem('currentPage') == 4) {
+      let replace4 = localStorage.getItem('imageTracker');
+    
+      if (replace4 == "1") {
+        //matchfitjean
+        first.src = ""
+        second.src = ""
+        third.src = ""
+        fourth.src = ""
+    
+      } else if (replace4 == "2") {
+        //matchfitlong
+        first.src = ""
+        second.src = ""
+        third.src = ""
+        fourth.src = ""
+    
+      } else if (replace4 == "3") {
+        //troserjeans
+        first.src = list33[0];
+        second.src = list33[1];
+        third.src = list33[2];
+        fourth.src = list33[3];
+    
+      } else if (replace4 == "4") {
+        //shirtcheck
+        first.src = ""
+        second.src = ""
+        third.src = ""
+        fourth.src = ""
+    
+      } else if (replace4 == "5") {
+        //shirttees
+        first.src = list26[0];
+        second.src = list26[1];
+        third.src = list26[2];
+        fourth.src = list26[3];
+    
+      } else if (replace4 == "6") {
+        //shirthoody
+        first.src = list24[0];
+        second.src = list24[1];
+        third.src = list24[2];
+        fourth.src = list24[3];
+    
+      } else if (replace4 == "7") {
+        //shoevency
+        first.src = list6[0];
+        second.src = list6[1];
+        third.src = "";
+        fourth.src = "";
+    
+      } else if (replace4 == "8") {
+        //matchfitshor
+        first.src = list34[0];
+        second.src = list34[1];
+        third.src = list34[2];
+        fourth.src = list34[3];
+    
+      }
+    }else if (localStorage.getItem('currentPage') == 5) {
+      let replace5 = localStorage.getItem('imageTracker');
+    
+      if (replace5 == "1") {
+        //shirthoody2
+        first.src = ""
+        second.src = ""
+        third.src = ""
+        fourth.src = ""
+    
+      } else if (replace5 == "2") {
+        //shoedor
+        first.src = ""
+        second.src = ""
+        third.src = ""
+        fourth.src = ""
+    
+      } else if (replace5 == "3") {
+        //shoeDrmart
+        first.src = list19[0];
+        second.src = list19[1];
+        third.src = "";
+        fourth.src = "";
+    
+      } else if (replace5 == "4") {
+        //shoelv
+        first.src = list12[0];
+        second.src = list12[1];
+        third.src = list12[2];
+        fourth.src = list12[3]
+    
+      } else if (replace5 == "5") {
+        //shoenike
+        first.src = list11[0];
+        second.src = list11[1];
+        third.src = list11[2];
+        fourth.src = "";
+    
+      } else if (replace5 == "6") {
+        //shirtte
+        first.src = list25[0];
+        second.src = list25[1];
+        third.src = list25[2];
+        fourth.src = list25[3]
+    
+      } else if (replace5 == "7") {
+        //shirtjac
+        first.src = list28[0];
+        second.src = list28[1];
+        third.src = list28[2];
+        fourth.src = list28[3]
+    
+      } else if (replace5 == "8") {
+        //trosershorts
+        first.src = list31[0];
+        second.src = list31[1];
+        third.src = list31[2];
+        fourth.src = list31[3]
+    
+      }
+    }else if (localStorage.getItem('currentPage') == 6) {
+      let replace6 = localStorage.getItem('imageTracker');
+    
+      if (replace6 == "1") {
+        //shoetimber
+        first.src = list3[0];
+        second.src = list3[1];
+        third.src = list3[2];
+        fourth.src = list3[3]
+    
+      } else if (replace6 == "2") {
+        //shoenikeB
+        first.src = list11[0];
+        second.src = list11[1];
+        third.src = list11[2];
+        fourth.src = "";
+    
+      } else if (replace6 == "3") {
+        //shoegaze
+        first.src = list15[0];
+        second.src = list15[1];
+        third.src = "";
+        fourth.src = "";
+    
+      } else if (replace6 == "4") {
+        //shoedan4
+        first.src = ""
+        second.src = ""
+        third.src = ""
+        fourth.src = ""
+    
+      } else if (replace6 == "5") {
+        //shoeree
+        first.src = list9[0];
+        second.src = list9[1];
+        third.src = list9[2];
+        fourth.src = "";
+    
+      } else if (replace6 == "6") {
+        //shoney
+        first.src = ""
+        second.src = ""
+        third.src = ""
+        fourth.src = ""
+    
+      } else if (replace6 == "7") {
+        //shoezoom
+        first.src = list5[0];
+        second.src = list5[1];
+        third.src = list5[2];
+        fourth.src = "";
+    
+      } else if (replace6 == "8") {
+        //shoeforce
+        first.src = list16[0];
+        second.src = list16[1];
+        third.src = "";
+        fourth.src = "";
+    
+      }
+    }else if (localStorage.getItem('currentPage') == 7) {
+      let replace7 = localStorage.getItem('imageTracker');
+    
+      if (replace7 == "1") {
+        //shoekicks
+        first.src = list14[0];
+        second.src = list14[1];
+        third.src = list14[2];
+        fourth.src = "";
+    
+      } else if (replace7 == "2") {
+        //shoefendi
+        first.src = ""
+        second.src = ""
+        third.src = ""
+        fourth.src = ""
+    
+      } else if (replace7 == "3") {
+        //shoebala
+        first.src = list21[0];
+        second.src = list21[1];
+        third.src = list21[2];
+        fourth.src = "";
+    
+      } else if (replace7 == "4") {
+        //shoedunk
+        first.src = list18[0];
+        second.src = list18[1];
+        third.src = list18[2];
+        fourth.src = "";
+    
+      } else if (replace7 == "5") {
+        //shirtciaga2
+        first.src = list30[0];
+        second.src = list30[1];
+        third.src = list30[2];
+        fourth.src = "";
+    
+      } else if (replace7 == "6") {
+        //troserpre
+        first.src = list32[0];
+        second.src = list32[1];
+        third.src = list32[2];
+        fourth.src = list32[3]
+    
+      } else if (replace7 == "7") {
+        //shirtess
+        first.src = list29[0];
+        second.src = list29[1];
+        third.src = list29[2];
+        fourth.src = list29[3]
+    
+      } else if (replace7 == "8") {
+        //shirtves
+        first.src = list27[0];
+        second.src = list27[1];
+        third.src = list27[2];
+        fourth.src = list27[3]
+    
+      }
+    }else if (localStorage.getItem('currentPage') == 8) {
+      let replace8 = localStorage.getItem('imageTracker');
+    
+      if (replace8 == "1") {
+    
+      } else if (replace8 == "2") {
+    
+      } else if (replace8 == "3") {
+    
+      } else if (replace8 == "4") {
+    
+      } else if (replace8 == "5") {
+    
+      } else if (replace8 == "6") {
+    
+      } else if (replace8 == "7") {
+    
+      } else if (replace8 == "8") {
+    
+      }
+    }
+}
+    
+</script>
+
+</body>
+</html>

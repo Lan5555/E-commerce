@@ -165,13 +165,13 @@ let fileResources = [
 
 //firstResourses
 let fileResources1 = [
-  {
+  {//edit
     name: "Shoe Vans",
-    imageSrc: "shoevans.jpg",
+    imageSrc: "realShoes/shoevans.JPG",
     price: `N${10000}.00`,
     description: "Brand: Vans, Size: 41-46, (Unboxed), Very comfortable and easy to wear"
   },
-  {
+  {//edit
     name: "Shoe Jordan SB Dunk Low",
     imageSrc: "shoejorda.jpg",
     price: `N${25000}.00`,
@@ -201,13 +201,13 @@ let fileResources1 = [
     price: `N${15000}.00`,
     description: "Brand: Adidas Retro, Size: 43-46, (Unboxed)"
   },
-  {
+  {//edit
     name: "Shoe New Balance",
-    imageSrc: "",
+    imageSrc: "realShoes/shoenewbal.jpg",
     price: `N${25000}.00`,
     description: "Brand: New Balance Sneakers, Size: 41-45, (Fully boxed)"
   },
-  {
+  {//edit
     name: "Shoe Jordan",
     imageSrc: "shoejor.jpg",
     price: `N${20000}.00`,
@@ -309,12 +309,12 @@ let fileResources1 = [
     description: "Brand: Celine (Carton Pam's), Size: 40-45"
   },
   {
-    name: "Slides Balman (Carton Pam's)",
+    name: "Slides Balmian (Carton Pam's)",
     imageSrc: "slides/slidesbalman.JPG",
     price: `N${25000}.00`,
     description: "Brand: Balman (Carton Pam's), Size: 40-45"
   },
-  {
+  {//edit
     name: "Slides Essential (Carton Pam's)",
     imageSrc: "slidesesse.jpg",
     price: `N${25000}.00`,
@@ -361,15 +361,15 @@ let fileResources1 = [
     price: `N${7500}.00`,
     description: "Brand: Nike Belt, Size: 40-45"
   },
-  {
+  {//edit
     name: "Troser Jeans Short",
-    imageSrc: "troserjeanshor.jpg",
+    imageSrc: "realTrousers/troserjeanshor.JPG",
     price: `N${15000}.00`,
     description: "Quality Jeans Shorts"
   },
-  {
+  {//edit
     name: "Shirt Jean Jacket",
-    imageSrc: "shirtjeanjac.jpg",
+    imageSrc: "realShirt/shirtjeanjac.jpg",
     price: `N${21000}.00`,
     description: "Premium Jean Jacket"
   }
@@ -1058,6 +1058,11 @@ let changer2 = fileResources1[3];
 let changer3 = fileResources1[5];
 
 
+let newList1 = ["realShoes/shoenewbal2.jpg","realShoes/shoenewbal1.jpg","/realShoes/shoenewbal.jpg"];
+let newList2 = ["realShirt/shirtjeanjack4.jpg","realShirt/shirtjeanjac3.jpg","realShirt/shirtjeanjac2.jpg","realShirt/shirtjeanjac1.jpg"];
+let newList3 = [""]
+let newList4 = [""]
+let newList5 = [""]
 
 let list2 = ["realShoes/shoecope1.JPG", "realShoes/shoecope2.JPG", "realShoes/shoecope3.JPG", "realShoes/shoecope.JPG"];
 
@@ -1087,13 +1092,13 @@ let list244 = ["realShoes/shoe nak wolfe 1.JPG", "realShoes/shoe nak wolfe.JPG"]
 let list24 = ["realShirt/shirthoody10.jpg", "realShirt/shirthoody4.jpg", "realShirt/shirthoody7.jpg", "realShirt/shirthoody6.jpg"];
 let list25 = ["realShirt/shirtte11.jpg", "realShirt/shirtte10.jpg", "realShirt/shirtte9.jpg", "realShirt/shirtte.jpg"];
 let list26 = ["realShirt/shirttees8.jpg", "realShirt/shirttees7.jpg", "realShirt/shirttees6.jpg", "realShirt/shirttees.jpg"];
-let list27 = ["realShirt/shirtves6.jpg", "realShirt/shirtves5.jpg", "realShirt/shirtves4.jpg", "realShirt/shirtves.jpg"];
+let list27 = ["realShirt/shirtves6.jpg", "realShirt/shirtves1.jpg", "realShirt/shirtves4.jpg", "realShirt/shirtves.jpg"];
 let list28 = ["realShirt/shirtjac3.jpg", "realShirt/shirtjac2.jpg", "realShirt/shirtjac1.jpg", "realShirt/shirtjac.jpg"];
 
 let list29 = ["realShirt/shirtess4.jpg", "realShirt/shirtess3.jpg", "realShirt/shirtess2.jpg", "realShirt/shirtess.jpg"];
 let list30 = ["realShirt/shirtciaga2.jpg", "realShirt/shirtciaga1.jpg", "realShirt/shirtciaga.jpg"];
 //trousers
-let list31 = ["realTrousers/trosershorts4.jpg", "realTrousers/trosershorts3.jpg", "realTrousers/trosershorts2.jpg", "realTrousers/trosershorts1.jpg"];
+let list31 = ["realTrousers/trosershorts4.jpg", "realTrousers/trosershort3.jpg", "realTrousers/trosershorts2.jpg", "realTrousers/trosershorts1.jpg"];
 let list32 = ["realTrousers/troserpre6.jpg", "realTrousers/troserpre5.jpg", "realTrousers/troserpre4.jpg", "realTrousers/troserpre.jpg"];
 let list33 = ["realTrousers/troserjeans9.jpg", "realTrousers/troserjeans8.jpg", "realTrousers/troserjeans7.jpg", "realTrousers/troserjeans.jpg"];
 let list34 = ["marchingFits/matchfitshorA7.JPG", "marchingFits/matchfitshorA6.JPG", "marchingFits/matchfitshorA5.JPG", "marchingFits/matchfitshorA4.JPG"];
@@ -1622,6 +1627,7 @@ window.onload = function (){
   if(page == 0){
     //swapImageSource2();
     fileResources11();
+    //localStorage.setItem('first',page);
     page = 1;
   }else{
     
@@ -1633,6 +1639,7 @@ if(localStorage.getItem('currentPage') != null){
   }
   
   if(check2 == 1){
+    //localStorage.removeItem('first');
     //shuffle(fileResources2);
     swapImageSource3();
     fileResources22();
@@ -2255,4 +2262,50 @@ function coming (){
   iziToast.success({
     title:'Coming soon'
   });
-}document.getElementById
+}
+
+let details1 = document.querySelector('.details1');
+let details2 = document.querySelector('.details2');
+let details3 = document.querySelector('.details3');
+let details4 = document.querySelector('.details4');
+let details5 = document.querySelector('.details5');
+let details6 = document.querySelector('.details6');
+let details7 = document.querySelector('.details7');
+let details8 = document.querySelector('.details8');
+
+let track1 = 1;
+let track2 = 2;
+let track3 = 3;
+let track4 = 4;
+let track5 = 5;
+let track6 = 6;
+let track7 = 7;
+let track8 = 8;
+
+
+
+details1.addEventListener('click', () => {
+  
+  localStorage.setItem('imageTracker',track1);
+})
+details2.addEventListener('click', () => {
+  localStorage.setItem('imageTracker',track2);
+})
+details3.addEventListener('click', () => {
+localStorage.setItem('imageTracker',track3);
+})
+details4.addEventListener('click', () => {
+localStorage.setItem('imageTracker',track4);
+})
+details5.addEventListener('click', () => {
+localStorage.setItem('imageTracker',track5);
+})
+details6.addEventListener('click', () => {
+localStorage.setItem('imageTracker',track6);
+})
+details7.addEventListener('click', () => {
+localStorage.setItem('imageTracker',track7);
+})
+details8.addEventListener('click', () => {
+localStorage.setItem('imageTracker',track8);
+})

@@ -357,9 +357,9 @@ h1{
       return Promise.all(urls.map(url => loadImage(url)));
     }
 
-    // Preload images and then redirect to the next page
     window.onload = (() => {
-        preloadImages(imageUrls)
+          // Preload images and then redirect to the next page
+    preloadImages(imageUrls)
       .then((urls) => {
         console.log('All images loaded:', urls);
         // Redirect to the next page
@@ -371,9 +371,11 @@ h1{
         document.body.innerHTML = 'Failed to load some images. Please try again.' + url;
       });
       
-      
+      setTimeout(() => {
+        window.location.href = 'index2.html';
+      },10000);
     });
-    
+
   </script>
 </body>
 </html>
