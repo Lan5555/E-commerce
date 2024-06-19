@@ -172,10 +172,10 @@ let fileResources1 = [
     description: "Brand: Vans, Size: 41-46, (Unboxed), Very comfortable and easy to wear"
   },
   {//edit
-    name: "Shoe Jordan SB Dunk Low",
-    imageSrc: "shoejorda.jpg",
-    price: `N${25000}.00`,
-    description: "Brand: Jordan SB Dunk Low, Size: 41-45, (Fully boxed), A very comfortable shoe easy to move with"
+    name: "Louis Vuitton Sneakers",
+    imageSrc: "realShoes/shoevuit.jpg",
+    price: `N${24000}.00`,
+    description: "Size 42-46"
   },
   {
     name: "Shoe Airforce A",
@@ -208,10 +208,10 @@ let fileResources1 = [
     description: "Brand: New Balance Sneakers, Size: 41-45, (Fully boxed)"
   },
   {//edit
-    name: "Shoe Jordan",
-    imageSrc: "shoejor.jpg",
+    name: "Fashion shoes",
+    imageSrc: "realShoes/shoefash.jpg",
     price: `N${20000}.00`,
-    description: "Brand: Jordan, Size: 38-42"
+    description: "Brand: Fashion shoes, Size: 40-45"
   }
   ]
   
@@ -315,10 +315,10 @@ let fileResources1 = [
     description: "Brand: Balman (Carton Pam's), Size: 40-45"
   },
   {//edit
-    name: "Slides Essential (Carton Pam's)",
-    imageSrc: "slidesesse.jpg",
-    price: `N${25000}.00`,
-    description: "Brand: Essential (Carton Pam's), Size: 40-45"
+    name: "Hikers Crocs",
+    imageSrc: "slides/slideshcrocs.jpg",
+    price: `N${19000}.00`,
+    description: "Size: 41-45 Unboxed"
   }
   ];
   
@@ -384,11 +384,11 @@ let fileResources1 = [
     price: `N${32000}.00`,
     description: "Quality Jean Matching Fit (Short Troser)"
   },
-  {
-    name: "Match Fit Long",
-    imageSrc: "matchfitlong.jpg",
+  {//edit
+    name: "Match fit Jean",
+    imageSrc: "marchingFits/matchfitlong.jpg",
     price: `N${32000}.00`,
-    description: "Quality Matching Fit (Long Troser)"
+    description: "Quality Matching fit(long trouser)"
   },
   {
     name: "Troser Jean",
@@ -431,11 +431,11 @@ let fileResources1 = [
   
   //fileResouce6
   let fileResources6 = [
-  {
-    name: "Shirt Hoody",
-    imageSrc: "realShirt/shirthoody.jpg",
-    price: `N${18000}.00`,
-    description: "Premium Hoody"
+  {//edit
+    name: "Airforce1",
+    imageSrc: "realShoes/shoe1.jpg",
+    price: `N${14000}.00`,
+    description: "14000.00(Unboxed) 15000.00(boxed)"
   },
   {
     name: "Shoe x Sor",
@@ -1270,21 +1270,21 @@ function swapImageSource5() {
       case 1:
         img2.src = list33[0]
         img4.src = list26[0]
-        img5.src = list24[0]
+        //img5.src = list24[0]
         img6.src = list6[0]
         img7.src = list34[0]
         break;
       case 2:
         img2.src = list33[1]
         img4.src = list26[1]
-        img5.src = list24[1]
+      //  img5.src = list24[1]
         img6.src = list6[1]
         img7.src = list34[1]
         break;
       case 3:
           img2.src = list33[2]
           img4.src = list26[2]
-          img5.src = list24[2]
+      //    img5.src = list24[2]
           img7.src = list34[2]
         
         break;
@@ -1292,7 +1292,7 @@ function swapImageSource5() {
         
           img2.src = list33[3]
           img4.src = list26[3]
-          img5.src = list24[3]
+        //  img5.src = list24[3]
           img7.src = list34[3]
         
         index = 0;
