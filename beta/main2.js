@@ -2308,4 +2308,4 @@ localStorage.setItem('imageTracker',track7);
 })
 details8.addEventListener('click', () => {
 localStorage.setItem('imageTracker',track8);
-})document.getElementById
+})
